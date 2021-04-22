@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dojo.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @dojo.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @dojo.address %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @dojo.active %>
+</p>
+
+<%= link_to 'Edit', edit_dojo_path(@dojo) %> |
+<%= link_to 'Back', dojos_path %>
