@@ -3,4 +3,7 @@ class Sensei < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_many :sensei_dojos 
+  has_many :dojos, through: :sensei_dojos
 end

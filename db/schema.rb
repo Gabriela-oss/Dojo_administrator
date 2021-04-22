@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_22_210906) do
+ActiveRecord::Schema.define(version: 2021_04_22_230112) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dojos", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "address", null: false
+    t.boolean "active", default: true, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "judokas", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -37,8 +46,19 @@ ActiveRecord::Schema.define(version: 2021_04_22_210906) do
     t.boolean "active", default: true, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "dojo_id", null: false
+    t.index ["dojo_id"], name: "index_judokas_on_dojo_id"
     t.index ["email"], name: "index_judokas_on_email", unique: true
     t.index ["reset_password_token"], name: "index_judokas_on_reset_password_token", unique: true
+  end
+
+  create_table "sensei_dojos", force: :cascade do |t|
+    t.bigint "sensei_id", null: false
+    t.bigint "dojo_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["dojo_id"], name: "index_sensei_dojos_on_dojo_id"
+    t.index ["sensei_id"], name: "index_sensei_dojos_on_sensei_id"
   end
 
   create_table "senseis", force: :cascade do |t|
@@ -63,4 +83,7 @@ ActiveRecord::Schema.define(version: 2021_04_22_210906) do
     t.index ["reset_password_token"], name: "index_senseis_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "judokas", "dojos"
+  add_foreign_key "sensei_dojos", "dojos"
+  add_foreign_key "sensei_dojos", "senseis"
 end
