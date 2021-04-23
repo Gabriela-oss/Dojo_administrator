@@ -48,8 +48,7 @@ ActiveRecord::Schema.define(version: 2021_04_23_183945) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "first_name", null: false
-    t.string "middle_name"
+    t.string "name_with_middle", null: false
     t.string "last_name", null: false
     t.string "surname", null: false
     t.date "date_of_birth", null: false
@@ -94,8 +93,7 @@ ActiveRecord::Schema.define(version: 2021_04_23_183945) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "first_name", null: false
-    t.string "middle_name"
+    t.string "name_with_middle", null: false
     t.string "last_name", null: false
     t.string "surname", null: false
     t.string "id_type", null: false
