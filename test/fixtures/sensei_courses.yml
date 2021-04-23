@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sensei: one
+  course: one
+
+two:
+  sensei: two
+  course: two

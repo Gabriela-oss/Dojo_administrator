@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dojo: one
+  sensei: one
+
+two:
+  dojo: two
+  sensei: two
