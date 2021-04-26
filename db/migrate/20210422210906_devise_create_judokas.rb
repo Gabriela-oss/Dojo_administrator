@@ -40,7 +40,7 @@ class DeviseCreateJudokas < ActiveRecord::Migration[6.1]
       t.string :nationality, null: false
       t.string :id_card, null: false
       t.string :address, null: false
-      t.integer :phone_number, null: false
+      t.string :phone_number, null: false
       t.string :parental_or_responsibility, null: false
       t.date :start_date, null: false
       t.string :photo, null: false
