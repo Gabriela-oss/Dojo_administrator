@@ -32,7 +32,7 @@ class DeviseCreateJudokas < ActiveRecord::Migration[6.1]
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-      t.string :name_with_middle, null: false
+      t.string :name, null: false
       t.string :last_name, null: false
       t.string :surname, null: false
       t.date :date_of_birth, null: false

@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-id_types = ['national', 'resident', 'foreign'] 
+id_types = ['national', 'resident', 'foreign'] # this id_types is bacause in the documentation of faker don't have this kind of types 
 Sensei.destroy_all
 Judoka.destroy_all
 Dojo.destroy_all
@@ -17,27 +17,26 @@ Dojo.destroy_all
   sensei = Sensei.create!(
   email: Faker::Internet.email, 
   password: 123123, 
-  name_with_middle: Faker::Name.name_with_middle,
+  name: Faker::Name.first_name, 
   last_name: Faker::Name.last_name, 
   surname: Faker::Name.last_name, 
-  id_type: id_types.shuffle.first, 
+  id_type: id_types.sample, 
   nationality: Faker::Nation.nationality,
   id_card:Faker::Number.number(digits: 9), 
   phone_number: Faker::PhoneNumber.cell_phone_in_e164,
   photo: Faker::Avatar.image(size: "50x50"))
-
-   # puts "Sensei has been created #{sensei.name_with_middle}" 
+  puts "Se creo sensei con id: #{sensei.id}"
   end
 
   74.times do
     judoka = Judoka.create!(
     email: Faker::Internet.email, 
     password: 123123, 
-    name_with_middle: Faker::Name.name_with_middle, 
-    last_name: Faker::Name.last_name , 
+    name: Faker::Name.first_name, 
+    last_name: Faker::Name.last_name, 
     surname: Faker::Name.last_name, 
     date_of_birth: Faker::Date.birthday(min_age: 18, max_age: 65), 
-    id_type: id_types.shuffle.first, 
+    id_type: id_types.sample, 
     nationality: Faker::Nation.nationality, 
     id_card: Faker::Number.number(digits: 9), 
     address: Faker::Address.full_address, 
@@ -47,5 +46,6 @@ Dojo.destroy_all
     photo: Faker::Avatar.image(size: "50x50"),
     dojo_id: Dojo.last.id
     )
-    #puts "Judokas has been created #{judoka.name_with_middle}"
+    puts "Se creo judoka con id: #{judoka.id}"
   end
+#Sensei.create!(email: 'admin@example.com', password: 'password') if Rails.env.development?
