@@ -3,6 +3,46 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "judokas/shared/error_messages", resource: resource %>
 
+     <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :surname %><br />
+    <%= f.text_field :surname, autofocus: true, autocomplete: "surname" %>
+  </div>
+
+  <div class="field">
+   <%= f.label :id_type %><br />
+   <%= f.text_field :id_type, autofocus: true, autocomplete: "id_type" %>
+  </div> 
+  
+  <div class="field">
+    <%= f.label :nationality %><br />
+    <%= f.text_field :nationality, autofocus: true, autocomplete: "nationality" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :id_card %><br />
+    <%= f.text_field :id_card, autofocus: true, autocomplete: "id_card" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number" %>
+  </div> 
+  
+  <div class="field">
+    <%= f.label :photo %><br />
+    <%= f.text_field :photo, autofocus: true, autocomplete: "photo" %>
+  </div>
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
