@@ -6,7 +6,8 @@
   <thead>
     <tr>
       <th>Dojo</th>
-      <th>Sensei</th>
+      <th>Name</th>
+      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +16,8 @@
     <% @courses.each do |course| %>
       <tr>
         <td><%= course.dojo_id %></td>
-        <td><%= course.sensei_id %></td>
+        <td><%= course.name %></td>
+        <td><%= course.description %></td>
         <td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
