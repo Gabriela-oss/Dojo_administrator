@@ -17,11 +17,9 @@ ActiveRecord::Schema.define(version: 2021_04_23_183945) do
 
   create_table "courses", force: :cascade do |t|
     t.bigint "dojo_id", null: false
-    t.bigint "sensei_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["dojo_id"], name: "index_courses_on_dojo_id"
-    t.index ["sensei_id"], name: "index_courses_on_sensei_id"
   end
 
   create_table "dojos", force: :cascade do |t|
@@ -48,7 +46,7 @@ ActiveRecord::Schema.define(version: 2021_04_23_183945) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "name_with_middle", null: false
+    t.string "name", null: false
     t.string "last_name", null: false
     t.string "surname", null: false
     t.date "date_of_birth", null: false
@@ -93,7 +91,7 @@ ActiveRecord::Schema.define(version: 2021_04_23_183945) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "name_with_middle", null: false
+    t.string "name", null: false
     t.string "last_name", null: false
     t.string "surname", null: false
     t.string "id_type", null: false
@@ -109,7 +107,6 @@ ActiveRecord::Schema.define(version: 2021_04_23_183945) do
   end
 
   add_foreign_key "courses", "dojos"
-  add_foreign_key "courses", "senseis"
   add_foreign_key "judoka_courses", "courses"
   add_foreign_key "judoka_courses", "judokas"
   add_foreign_key "judokas", "dojos"

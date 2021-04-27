@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :courses
   resources :dojos
   devise_for :judokas
-  devise_for :senseis
+  devise_for :senseis, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   root to: "dojos#index"
 end
