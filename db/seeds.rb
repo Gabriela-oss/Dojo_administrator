@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 id_types = ['national', 'resident', 'foreign'] # this id_types is bacause in the documentation of faker don't have this kind of types 
+
 Sensei.destroy_all
 Judoka.destroy_all
 Dojo.destroy_all
