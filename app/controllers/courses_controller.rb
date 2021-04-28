@@ -13,6 +13,7 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
+    @senseis = Sensei.all
   end
 
   # GET /courses/1/edit
