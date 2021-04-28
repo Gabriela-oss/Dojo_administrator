@@ -3,6 +3,11 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "judokas/shared/error_messages", resource: resource %>
 
+    <div class="field">
+    <%= f.label :dojo_id %><br />
+    <%= f.select :dojo_id, options_from_collection_for_select(@dojos, :id, :name), prompt: "Select a dojo:" %>
+  </div>
+
      <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
@@ -20,12 +25,12 @@
 
      <div class="field">
    <%= f.label :date_of_birth %><br />
-   <%= f.text_field :date_of_birth, autofocus: true, autocomplete: "date_of_birth" %>
+   <%= f.date_field :date_of_birth, autofocus: true, autocomplete: "date_of_birth" %>
   </div> 
 
   <div class="field">
    <%= f.label :id_type %><br />
-   <%= f.text_field :id_type, autofocus: true, autocomplete: "id_type" %>
+   <%= f.select :id_type, options_for_select(@types), prompt: "Select a id_type:"%>
   </div> 
   
   <div class="field">
@@ -55,7 +60,7 @@
 
   <div class="field">
     <%= f.label :start_date %><br />
-    <%= f.text_field :start_date, autofocus: true, autocomplete: "start_date" %>
+    <%= f.date_field :start_date, autofocus: true, autocomplete: "start_date" %>
   </div>
   
   <div class="field">
