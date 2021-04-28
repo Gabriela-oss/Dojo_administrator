@@ -1,6 +1,12 @@
 ActiveAdmin.register Sensei do
   permit_params :email, :password, :password_confirmation, :name, :last_name, :surname, :id_type, :nationality, :id_card, :phone_number, :photo
 
+  # controller do 
+  #     def new
+  #         ttypes = ['national', 'resident', 'foreign']
+  #     end
+  # end
+
   index do
     selectable_column
     id_column
@@ -21,7 +27,9 @@ ActiveAdmin.register Sensei do
       f.input :name
       f.input :last_name
       f.input :surname
-      f.input :id_type
+      f.input :id_type 
+      # as => :select, :collection => Types.all.collect {|types| [:id, :name] }
+      # f.input :product, :as => :select, :collection => Product.all.collect {|product| [product.name, product.id] }
       f.input :nationality
       f.input :id_card
       f.input :phone_number
