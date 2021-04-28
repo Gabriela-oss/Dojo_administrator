@@ -1,6 +1,5 @@
 class Course < ApplicationRecord
   belongs_to :dojo
-  belongs_to :sensei
 
   has_many :sensei_courses 
   has_many :senseis, through: :sensei_courses
