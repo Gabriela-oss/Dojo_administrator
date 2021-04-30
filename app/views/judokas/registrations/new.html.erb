@@ -1,76 +1,76 @@
-<h2>Sign up</h2>
+<h2>Registrate</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "judokas/shared/error_messages", resource: resource %>
 
     <div class="field">
     <%= f.label :dojo_id %><br />
-    <%= f.select :dojo_id, options_from_collection_for_select(@dojos, :id, :name), prompt: "Select a dojo:" %>
+    <%= f.select :dojo_id, options_from_collection_for_select(@dojos, :id, :name), prompt: "Seleccionar el Dojo:" %>
   </div>
 
      <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "Nombre" %>
   </div>
 
   <div class="field">
     <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "Primer apellido" %>
   </div>
 
    <div class="field">
     <%= f.label :surname %><br />
-    <%= f.text_field :surname, autofocus: true, autocomplete: "surname" %>
+    <%= f.text_field :surname, autofocus: true, autocomplete: "Segundo nombre" %>
   </div>
 
      <div class="field">
    <%= f.label :date_of_birth %><br />
-   <%= f.date_field :date_of_birth, autofocus: true, autocomplete: "date_of_birth" %>
+   <%= f.date_field :date_of_birth, autofocus: true, autocomplete: "Fecha nacimiento" %>
   </div> 
 
   <div class="field">
    <%= f.label :id_type %><br />
-   <%= f.select :id_type, options_for_select(@types), prompt: "Select a id_type:"%>
+   <%= f.select :id_type, options_for_select(@types), prompt: "Seleccione el tipo de identificación:"%>
   </div> 
   
   <div class="field">
     <%= f.label :nationality %><br />
-    <%= f.text_field :nationality, autofocus: true, autocomplete: "nationality" %>
+    <%= f.text_field :nationality, autofocus: true, autocomplete: "Nacionalidad" %>
   </div>
 
   <div class="field">
     <%= f.label :id_card %><br />
-    <%= f.text_field :id_card, autofocus: true, autocomplete: "id_card" %>
+    <%= f.text_field :id_card, autofocus: true, autocomplete: "Número de identificación" %>
   </div>
 
   <div class="field">
     <%= f.label :address %><br />
-    <%= f.text_field :address, autofocus: true, autocomplete: "address" %>
+    <%= f.text_field :address, autofocus: true, autocomplete: "Dirreción" %>
   </div>
 
   <div class="field">
     <%= f.label :phone_number %><br />
-    <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number" %>
+    <%= f.text_field :phone_number, autofocus: true, autocomplete: "Número de teléfono" %>
   </div> 
 
   <div class="field">
     <%= f.label :parental_or_responsibility %><br />
-    <%= f.text_field :parental_or_responsibility, autofocus: true, autocomplete: "parental_or_responsibility" %>
+    <%= f.text_field :parental_or_responsibility, autofocus: true, autocomplete: "Padre o responsable" %>
   </div>
 
   <div class="field">
     <%= f.label :start_date %><br />
-    <%= f.date_field :start_date, autofocus: true, autocomplete: "start_date" %>
+    <%= f.date_field :start_date, autofocus: true, autocomplete: "Fecha de inicio" %>
   </div>
   
   <div class="field">
     <%= f.label :photo %><br />
-    <%= f.text_field :photo, autofocus: true, autocomplete: "photo" %>
+    <%= f.text_field :photo, autofocus: true, autocomplete: "Foto" %>
   </div>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "Correo" %>
   </div>
 
   <div class="field">
@@ -87,7 +87,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Registrate" %>
   </div>
 <% end %>
 

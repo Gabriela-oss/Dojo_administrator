@@ -5,10 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Address</th>
-      <th>Active</th>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Dirección</th>
+      <th>Activo</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,9 +20,9 @@
         <td><%= dojo.email %></td>
         <td><%= dojo.address %></td>
         <td><%= dojo.active %></td>
-        <td><%= link_to 'Show', dojo %></td>
-        <td><%= link_to 'Edit', edit_dojo_path(dojo) %></td>
-        <td><%= link_to 'Destroy', dojo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', dojo %></td>
+        <td><%= link_to 'Editar', edit_dojo_path(dojo) %></td>
+        <td><%= link_to 'Destruir', dojo, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Dojo', new_dojo_path %>
+<%= link_to 'Nuevo Dojo', new_dojo_path %>
