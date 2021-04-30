@@ -10,4 +10,5 @@ class Sensei < ApplicationRecord
   has_many :sensei_courses
   has_many :courses, through: :sensei_courses
 
+  belongs_to :level
 end

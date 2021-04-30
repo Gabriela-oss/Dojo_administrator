@@ -5,6 +5,7 @@ class Judoka < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :dojo
+  belongs_to :level
 
   has_many :judoka_courses
   has_many :courses, through: :judoka_courses
