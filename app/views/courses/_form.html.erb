@@ -11,10 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
+
+<div class="field">
     <%= form.label :dojo_id %>
-    <%= form.text_field :dojo_id %>
+    <%= form.select :dojo_id, options_from_collection_for_select(@dojos, :id, :name), prompt: 'Seleccionar el Dojo' %>
   </div>
+  
 
   <div class="field">
     <%= form.label :name %>
@@ -22,8 +24,8 @@
   </div>
 
     <div class="field">
-    <%= form.label :sensei_id %>
-    <%= form.select :sensei_id, options_from_collection_for_select(@senseis, :id, :name), prompt: 'Select a sensei' %>
+    <%= form.label :sensei_courses_id %>
+    <%= form.select :sensei_courses_id, options_from_collection_for_select(@senseis, :id, :name), prompt: 'Select a sensei' %>
   </div>
 
   <div class="field">

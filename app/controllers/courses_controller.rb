@@ -14,6 +14,7 @@ class CoursesController < ApplicationController
   def new
     @course = Course.new
     @senseis = Sensei.all
+    @dojos = Dojo.all
   end
 
   # GET /courses/1/edit
@@ -23,7 +24,8 @@ class CoursesController < ApplicationController
   # POST /courses or /courses.json
   def create
     @course = Course.new(course_params)
-
+    @senseis = Sensei.all
+    @dojos = Dojo.all
     respond_to do |format|
       if @course.save
         format.html { redirect_to @course, notice: "Course was successfully created." }
