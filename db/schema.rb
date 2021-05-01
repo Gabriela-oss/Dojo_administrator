@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_23_183945) do
+ActiveRecord::Schema.define(version: 2021_04_30_230703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string "name", null: false
@@ -64,9 +70,17 @@ ActiveRecord::Schema.define(version: 2021_04_23_183945) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "dojo_id", null: false
+    t.bigint "level_id", null: false
     t.index ["dojo_id"], name: "index_judokas_on_dojo_id"
     t.index ["email"], name: "index_judokas_on_email", unique: true
+    t.index ["level_id"], name: "index_judokas_on_level_id"
     t.index ["reset_password_token"], name: "index_judokas_on_reset_password_token", unique: true
+  end
+
+  create_table "levels", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "sensei_courses", force: :cascade do |t|
@@ -104,7 +118,9 @@ ActiveRecord::Schema.define(version: 2021_04_23_183945) do
     t.boolean "active", default: true, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "level_id", null: false
     t.index ["email"], name: "index_senseis_on_email", unique: true
+    t.index ["level_id"], name: "index_senseis_on_level_id"
     t.index ["reset_password_token"], name: "index_senseis_on_reset_password_token", unique: true
   end
 
@@ -112,8 +128,10 @@ ActiveRecord::Schema.define(version: 2021_04_23_183945) do
   add_foreign_key "judoka_courses", "courses"
   add_foreign_key "judoka_courses", "judokas"
   add_foreign_key "judokas", "dojos"
+  add_foreign_key "judokas", "levels"
   add_foreign_key "sensei_courses", "courses"
   add_foreign_key "sensei_courses", "senseis"
   add_foreign_key "sensei_dojos", "dojos"
   add_foreign_key "sensei_dojos", "senseis"
+  add_foreign_key "senseis", "levels"
 end
