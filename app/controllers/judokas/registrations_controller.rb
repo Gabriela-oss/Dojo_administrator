@@ -9,6 +9,7 @@ class Judokas::RegistrationsController < Devise::RegistrationsController
     @dojos = Dojo.all 
     @types = ['national', 'resident', 'foreign']
     @categories = Category.all
+    @judo_tests = JudoTest.all
     super
   end
 
@@ -16,6 +17,7 @@ class Judokas::RegistrationsController < Devise::RegistrationsController
   def create
     @dojos = Dojo.all   
     @types = ['national', 'resident', 'foreign']
+    @judo_tests = JudoTest.all
     super
   end
 

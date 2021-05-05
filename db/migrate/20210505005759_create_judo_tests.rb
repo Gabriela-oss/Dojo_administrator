@@ -5,12 +5,12 @@ class CreateJudoTests < ActiveRecord::Migration[6.1]
       t.string :description, null: false
       t.integer :weight, null: false, default: 0
       t.integer :height, null: false, default: 0
-      t.string :course_naveta, null: false
-      t.string :speed, null: false
-      t.string :flexibility, null: false
-      t.string :push_up, null: false
-      t.string :ABS, null: false
-      t.string :vertical_jump, null: false
+      t.integer :course_naveta, null: false
+      t.integer :speed, null: false
+      t.integer :flexibility, null: false
+      t.integer :push_up, null: false
+      t.integer :ABS, null: false
+      t.integer :vertical_jump, null: false
 
       t.timestamps
     end

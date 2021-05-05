@@ -53,12 +53,12 @@ ActiveRecord::Schema.define(version: 2021_05_05_170645) do
     t.string "description", null: false
     t.integer "weight", default: 0, null: false
     t.integer "height", default: 0, null: false
-    t.string "course_naveta", null: false
-    t.string "speed", null: false
-    t.string "flexibility", null: false
-    t.string "push_up", null: false
-    t.string "ABS", null: false
-    t.string "vertical_jump", null: false
+    t.integer "course_naveta", null: false
+    t.integer "speed", null: false
+    t.integer "flexibility", null: false
+    t.integer "push_up", null: false
+    t.integer "ABS", null: false
+    t.integer "vertical_jump", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
