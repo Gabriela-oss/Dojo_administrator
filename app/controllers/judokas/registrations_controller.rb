@@ -8,6 +8,7 @@ class Judokas::RegistrationsController < Devise::RegistrationsController
   def new
     @dojos = Dojo.all 
     @types = ['national', 'resident', 'foreign']
+    @categories = Category.all
     super
   end
 
