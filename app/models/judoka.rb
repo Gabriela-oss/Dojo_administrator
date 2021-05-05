@@ -6,6 +6,7 @@ class Judoka < ApplicationRecord
 
   belongs_to :dojo
   belongs_to :level
+  belongs_to :judo_test
 
   has_many :judoka_courses
   has_many :courses, through: :judoka_courses

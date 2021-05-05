@@ -11,4 +11,5 @@ class Sensei < ApplicationRecord
   has_many :courses, through: :sensei_courses
 
   belongs_to :level
+  belongs_to :judo_test
 end
