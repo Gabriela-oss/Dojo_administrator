@@ -69,6 +69,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :categories %><br />
+    <%= f.select :categories, options_from_collection_for_select(@categories, :id, :name), id:'categoria' %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "Correo" %>
   </div>
@@ -80,6 +85,7 @@
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
+  
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
