@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   get 'judokas', to: 'judokas#index', as: 'judokas'
 
-  root to: "dojos#index"
+  root to: "courses#lobby"
 end
