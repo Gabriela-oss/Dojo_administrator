@@ -8,15 +8,41 @@
 
 id_types = ['national', 'resident', 'foreign'] # this id_types is bacause in the documentation of faker don't have this kind of types 
 
+Level.destroy_all
+Category.destroy_all
 Sensei.destroy_all
 Judoka.destroy_all
 Dojo.destroy_all
+
 
   dojo = Dojo.create!(name: 'Judo Nobe No Suke', email: 'judo@gmail.com', address: 'Ciudad Colon')
   dojo1 = Dojo.create!(name: 'Alajuela codea', email: 'sanchoba04@gmail.com', address: 'Alajuela')
   dojo2 = Dojo.create!(name: 'Avenida 04', email: 'beto_bro@hotmail.com', address: 'Cartago')
   dojo3 = Dojo.create!(name: 'Bushi no Tamashii', email: 'joucascantevar@gmail.com', address: 'Brasil de Mora')
   dojo4 = Dojo.create!(name: 'Cano Judo Club', email: 'canojudoclub@hotmail.com', address: 'Alajuela')
+  
+  levels = Level.create!(name:' blanco')
+  levels1 = Level.create!(name: 'amarillo')
+  levels2 = Level.create!(name: 'naranja')
+  levels3 = Level.create!(name: 'verde')
+  levels4 = Level.create!(name: 'azul')
+  levels5 = Level.create!(name: 'marron')
+  levels6 = Level.create!(name: 'negro-1er_dan')
+  levels7 = Level.create!(name: 'negro-2do_dan')
+  levels8 = Level.create!(name: 'negro-3er_dan')
+  levels9 = Level.create!(name: 'negro-4to_dan')
+  levels10 = Level.create!(name: 'rojo-6to_dan')
+  levels11 = Level.create!(name: 'rojo-7mo_dan')
+  levels12 = Level.create!(name: 'rojo-8vo_dan')
+  levels13 = Level.create!(name: 'rojo-9no_dan')
+  levels14 = Level.create!(name: 'rojo-10mo_dan')
+  levels15 = Level.create!(name: 'negro-5to_dan')
+  
+  categories = Category.create!(name:'infantil')
+  categories1 = Category.create!(name: 'cadete')
+  categories2 = Category.create!(name: 'junior')
+  categories3 = Category.create!(name: 'senior')
+  categories4 = Category.create!(name: 'sensei')
 
   10.times do
   sensei = Sensei.create!(
@@ -26,6 +52,7 @@ Dojo.destroy_all
   last_name: Faker::Name.last_name, 
   surname: Faker::Name.last_name, 
   id_type: id_types.sample, 
+  level_id: Level.all.sample.id,
   nationality: Faker::Nation.nationality,
   id_card:Faker::Number.number(digits: 9), 
   phone_number: Faker::PhoneNumber.cell_phone_in_e164,
@@ -41,6 +68,7 @@ Dojo.destroy_all
     last_name: Faker::Name.last_name, 
     surname: Faker::Name.last_name, 
     date_of_birth: Faker::Date.birthday(min_age: 18, max_age: 65), 
+    level_id: Level.all.sample.id,
     id_type: id_types.sample, 
     nationality: Faker::Nation.nationality, 
     id_card: Faker::Number.number(digits: 9), 
@@ -52,4 +80,7 @@ Dojo.destroy_all
     dojo_id: Dojo.last.id)
     puts "Judoka was created with id: #{judoka.id}"
   end
+
+  
+  
 #Sensei.create!(email: 'admin@example.com', password: 'password') if Rails.env.development?
