@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   devise_for :judokas, controllers: {registrations:'judokas/registrations'}
   devise_for :senseis, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root to: "dojos#index"
+  root to: "courses#lobby"
 end
