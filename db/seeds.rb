@@ -13,7 +13,7 @@ Category.destroy_all
 Sensei.destroy_all
 Judoka.destroy_all
 Dojo.destroy_all
-JudoTest.destroy.all
+JudoTest.destroy_all
 
 
   dojo = Dojo.create!(name: 'Judo Nobe No Suke', email: 'judo@gmail.com', address: 'Ciudad Colon')
@@ -22,11 +22,11 @@ JudoTest.destroy.all
   dojo3 = Dojo.create!(name: 'Bushi no Tamashii', email: 'joucascantevar@gmail.com', address: 'Brasil de Mora')
   dojo4 = Dojo.create!(name: 'Cano Judo Club', email: 'canojudoclub@hotmail.com', address: 'Alajuela')
 
-  judo_test = JudoTest.create!(date_of_test: '12-04-2000',  description: 'Muy bien hecha la prueba',  weight: 70, height: 161, course_naveta: 55, speed: 80, flexibility: 100, push_up: 90, ABS: 95, vertical_jump: 60) 
+  judo_test = JudoTest.create!(date_of_test: '2000-04-12',  description: 'Muy bien hecha la prueba',  weight: 70, height: 161, course_naveta: 55, speed: 80, flexibility: 100, push_up: 90, ABS: 95, vertical_jump: 60) 
 
-  judo_test1 = JudoTest.create!(date_of_test: '12-05-2001',  description: 'Muy bien sigue asi ',  weight: 65, height: 160, course_naveta: 52, speed: 60, flexibility: 90, push_up: 80, ABS: 100, vertical_jump: 50) 
+  judo_test1 = JudoTest.create!(date_of_test: '2001-12-05',  description: 'Muy bien sigue asi ',  weight: 65, height: 160, course_naveta: 52, speed: 60, flexibility: 90, push_up: 80, ABS: 100, vertical_jump: 50) 
 
-  judo_test2 = JudoTest.create!(date_of_test: '12-06-2003',  description: 'Aprovado',  weight: 55, height: 170, course_naveta: 50, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test2 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado',  weight: 55, height: 170, course_naveta: 50, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
   
   levels = Level.create!(name:' blanco')
   levels1 = Level.create!(name: 'amarillo')
@@ -60,7 +60,7 @@ JudoTest.destroy.all
   surname: Faker::Name.last_name, 
   id_type: id_types.sample, 
   level_id: Level.all.sample.id,
-  judo_test: Judo_test.all.sample.id,  
+  judo_test_id: JudoTest.all.sample.id,  
   nationality: Faker::Nation.nationality,
   id_card:Faker::Number.number(digits: 9), 
   phone_number: Faker::PhoneNumber.cell_phone_in_e164,
@@ -77,7 +77,7 @@ JudoTest.destroy.all
     surname: Faker::Name.last_name, 
     date_of_birth: Faker::Date.birthday(min_age: 18, max_age: 65), 
     level_id: Level.all.sample.id,
-    judo_test: Judo_test.all.sample.id,
+    judo_test_id: JudoTest.all.sample.id,
     id_type: id_types.sample, 
     nationality: Faker::Nation.nationality, 
     id_card: Faker::Number.number(digits: 9), 
