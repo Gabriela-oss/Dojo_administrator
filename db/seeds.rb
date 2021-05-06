@@ -8,10 +8,10 @@
 
 id_types = ['national', 'resident', 'foreign'] # this id_types is bacause in the documentation of faker don't have this kind of types 
 
-Level.destroy_all
 Category.destroy_all
 Sensei.destroy_all
 Judoka.destroy_all
+Level.destroy_all
 Dojo.destroy_all
 JudoTest.destroy_all
 
@@ -86,7 +86,7 @@ JudoTest.destroy_all
     parental_or_responsibility:Faker::FunnyName.two_word_name,   
     start_date: Faker::Date.in_date_period, 
     photo: Faker::Avatar.image(size: "50x50"),
-    dojo_id: Dojo.last.id)
+    dojo_id: Dojo.all.sample.id)
     puts "Judoka was created with id: #{judoka.id}"
   end
 

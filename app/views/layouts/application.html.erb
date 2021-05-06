@@ -25,6 +25,7 @@
     <%= link_to 'Dojos', dojos_path, class: 'nav-link active' %>
     <%= link_to 'Cursos', courses_path, class: 'nav-link' %>
     <%= link_to 'Judokas', new_judoka_session_path, class: 'nav-link' %>
+    <div class="ml-auto">
     <% if judoka_signed_in? %>
     <%= link_to 'Desconectarse', destroy_judoka_session_path, method: :delete%>
     <%if current_judoka %>
@@ -33,6 +34,8 @@
     </li>
     <%end%>
     <% end %> 
+  </div>
+
     </div>
     </div>
     </nav> 
