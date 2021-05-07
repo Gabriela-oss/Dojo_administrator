@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Courses</h1>
+<h1>Cursos</h1>
 
 <table>
   <thead>
@@ -20,9 +20,9 @@
         <td><%= course.sensei_courses.name %></td>
         <td><%= course.name %></td>
         <td><%= course.description %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', course %></td>
+        <td><%= link_to 'Editar', edit_course_path(course) %></td>
+        <td><%= link_to 'Destruir', course, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Course', new_course_path %>
+<%= link_to 'Nuevo Curso', new_course_path %>
