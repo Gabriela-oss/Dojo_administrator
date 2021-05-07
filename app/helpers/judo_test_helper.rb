@@ -1,0 +1,2 @@
+module JudoTestHelper
+end
