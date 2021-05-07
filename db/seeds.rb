@@ -63,8 +63,7 @@ JudoTest.destroy_all
   judo_test_id: JudoTest.all.sample.id,  
   nationality: Faker::Nation.nationality,
   id_card:Faker::Number.number(digits: 9), 
-  phone_number: Faker::PhoneNumber.cell_phone_in_e164,
-  photo: Faker::Avatar.image(size: "50x50"))
+  phone_number: Faker::PhoneNumber.cell_phone_in_e164)
   puts "Sensei was created with id: #{sensei.id}"
   end
 
@@ -84,8 +83,7 @@ JudoTest.destroy_all
     address: Faker::Address.full_address, 
     phone_number: Faker::PhoneNumber.cell_phone_in_e164, 
     parental_or_responsibility:Faker::FunnyName.two_word_name,   
-    start_date: Faker::Date.in_date_period, 
-    photo: Faker::Avatar.image(size: "50x50"),
+    start_date: Faker::Date.in_date_period,
     dojo_id: Dojo.all.sample.id)
     puts "Judoka was created with id: #{judoka.id}"
   end

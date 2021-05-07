@@ -4,21 +4,38 @@
 <table>
 <thead>
 <tr>
-<th>Nombre</th>
-<th>Dojo</th>
-<th>ID</th>
+<th>Fecha de la Prueba</th>
+<th>Descripción</th>
+<th>Número de Identificación</th>
+<th>Peso</th>
+<th>Altura</th>
+<th>Curso Naveta</th>
+<th>Velocidad</th>
+<th>Flexibilidad</th>
+<th>Lagartijas</th>
+<th>Abdominales</th>
+<th>Salto Vertical</th>
+<th></th>
+
 <th colspan="3"></th>
 </tr>
 </thead>
 
 <tbody>
-<% @judo_tests.each do |judoka| %>
-<tr>
-<td><%= judo_test.name %></td>
-<td><%= judo_test.dojo.name %></td>
-<td><%= judo_test.id_card %></td>
-<td><%#= link_to 'Mostrar', course %></td>
-</tr>
+<% @judo_tests.each do |judotest| %>
+    <tr>
+    <td><%= judotest.date_of_test %></td>
+    <td><%= judotest.description %></td>
+    <td><%= judotest.weight%></td>
+    <td><%= judotest.height%></td>
+    <td><%= judotest.course_naveta%></td>
+    <td><%= judotest.speed%></td>
+    <td><%= judotest.flexibility%></td>
+    <td><%= judotest.push_up%></td>
+    <td><%= judotest.ABS%></td>
+    <td><%= judotest.vertical_jump%></td>
+    <td><%#= link_to 'Mostrar', course %></td>
+    </tr>
 <% end %>
 </tbody>
 </table>

@@ -1,6 +1,6 @@
 class JudoTestController < ApplicationController
   def index
-    @judo_test = JudoTest.all
+    @judo_tests = JudoTest.all
   end
 
   def show

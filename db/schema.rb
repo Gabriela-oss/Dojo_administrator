@@ -89,7 +89,6 @@ ActiveRecord::Schema.define(version: 2021_05_05_170645) do
     t.string "phone_number", null: false
     t.string "parental_or_responsibility", null: false
     t.date "start_date", null: false
-    t.string "photo", null: false
     t.boolean "active", default: true, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -140,7 +139,6 @@ ActiveRecord::Schema.define(version: 2021_05_05_170645) do
     t.string "nationality", null: false
     t.string "id_card", null: false
     t.string "phone_number", null: false
-    t.string "photo", null: false
     t.boolean "active", default: true, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

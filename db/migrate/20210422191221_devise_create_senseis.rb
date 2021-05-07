@@ -39,7 +39,6 @@ class DeviseCreateSenseis < ActiveRecord::Migration[6.1]
       t.string :nationality, null: false
       t.string :id_card, null: false
       t.string :phone_number, null: false
-      t.string :photo, null: false
       t.boolean :active, null: false, default: true
 
       t.timestamps null: false

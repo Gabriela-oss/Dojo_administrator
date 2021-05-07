@@ -43,7 +43,6 @@ class DeviseCreateJudokas < ActiveRecord::Migration[6.1]
       t.string :phone_number, null: false
       t.string :parental_or_responsibility, null: false
       t.date :start_date, null: false
-      t.string :photo, null: false
       t.boolean :active, null: false, default: true
 
       t.timestamps null: false
