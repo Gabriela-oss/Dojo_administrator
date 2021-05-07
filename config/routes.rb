@@ -14,6 +14,5 @@ Rails.application.routes.draw do
   get 'judokas/:id', to: 'judokas#show', as: 'judokas_show'
   get 'judo_test/:id', to: 'judo_test#show', as: 'judo_test_show'
   
-
   root to: "courses#lobby"
 end
