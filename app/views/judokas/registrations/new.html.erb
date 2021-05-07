@@ -15,17 +15,17 @@
 
   <div class="field">
     <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autocomplete: "Primer apellido" %>
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "Primer apellido" %>
   </div>
 
    <div class="field">
     <%= f.label :surname %><br />
-    <%= f.text_field :surname, autocomplete: "Segundo nombre" %>
+    <%= f.text_field :surname, autofocus: true, autocomplete: "Segundo nombre" %>
   </div>
 
      <div class="field">
    <%= f.label :date_of_birth %><br />
-   <%= f.date_field :date_of_birth, autocomplete: "Fecha nacimiento" %>
+   <%= f.date_field :date_of_birth, autofocus: true, autocomplete: "Fecha nacimiento" %>
   </div> 
 
   <div class="field">
@@ -40,12 +40,12 @@
   
   <div class="field">
     <%= f.label :nationality %><br />
-    <%= f.text_field :nationality, autocomplete: "Nacionalidad" %>
+    <%= f.text_field :nationality, autofocus: true, autocomplete: "Nacionalidad" %>
   </div>
 
   <div class="field">
     <%= f.label :id_card %><br />
-    <%= f.text_field :id_card, autocomplete: "Número de identificación" %>
+    <%= f.text_field :id_card, autofocus: true, autocomplete: "Número de identificación" %>
   </div>
 
   <div class="field">
@@ -55,7 +55,7 @@
 
   <div class="field">
     <%= f.label :phone_number %><br />
-    <%= f.text_field :phone_number, autocomplete: "Número de teléfono" %>
+    <%= f.text_field :phone_number, autofocus: true, autocomplete: "Número de teléfono" %>
   </div> 
 
   <div class="field">
@@ -65,12 +65,12 @@
 
   <div class="field">
     <%= f.label :start_date %><br />
-    <%= f.date_field :start_date, autocomplete: "Fecha de inicio" %>
+    <%= f.date_field :start_date, autofocus: true, autocomplete: "Fecha de inicio" %>
   </div>
   
   <div class="field">
     <%= f.label :photo %><br />
-    <%= f.file_field :photo, class: 'form-control', placeholder: 'photo' %>
+    <%= f.text_field :photo, autofocus: true, autocomplete: "Foto" %>
   </div>
 
   <!--<div class="field">-->
@@ -80,7 +80,7 @@
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autocomplete: "Correo" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "Correo" %>
   </div>
 
   <div class="field">
