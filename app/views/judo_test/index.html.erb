@@ -32,7 +32,7 @@
     <td><%= judotest.push_up%></td>
     <td><%= judotest.ABS%></td>
     <td><%= judotest.vertical_jump%></td>
-    <td><%= link_to 'Mostrar',  judo_test_show_path %></td>
+    <td><%= link_to 'Mostrar', judo_test_show_path(judotest.id) %></td>
     </tr>
 <% end %>
 </tbody>

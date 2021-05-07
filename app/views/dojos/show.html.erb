@@ -20,5 +20,11 @@
   <%= @dojo.active %>
 </p>
 
+<ul>
+  <% @dojo.courses.each do |course| %>
+    <li><%= course.name %></li>
+  <% end %>
+</ul>
+
 <%= link_to 'Editar', edit_dojo_path(@dojo) %> |
 <%= link_to 'Atrás', dojos_path %>
