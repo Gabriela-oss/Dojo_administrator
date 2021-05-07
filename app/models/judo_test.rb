@@ -1,5 +1,5 @@
 class JudoTest < ApplicationRecord
-  has_many :sensei
-  has_many :judoka
-  has_many :course
+  has_many :senseis
+  has_many :judokas
+  has_many :courses
 end

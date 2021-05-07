@@ -26,7 +26,7 @@ JudoTest.destroy_all
 
   judo_test1 = JudoTest.create!(date_of_test: '2001-12-05',  description: 'Muy bien sigue asi ',  weight: 65, height: 160, course_naveta: 52, speed: 60, flexibility: 90, push_up: 80, ABS: 100, vertical_jump: 50) 
 
-  judo_test2 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado',  weight: 55, height: 170, course_naveta: 50, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test2 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 55, height: 170, course_naveta: 50, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
   
   levels = Level.create!(name:' blanco')
   levels1 = Level.create!(name: 'amarillo')

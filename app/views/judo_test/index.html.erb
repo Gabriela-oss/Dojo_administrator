@@ -1,12 +1,10 @@
-<h1 class='text-center' >JudoTest #index</h1>
-
+<h1 class='text-center' >Judo Tests</h1>
 
 <table>
 <thead>
 <tr>
 <th>Fecha de la Prueba</th>
 <th>Descripción</th>
-<th>Número de Identificación</th>
 <th>Peso</th>
 <th>Altura</th>
 <th>Curso Naveta</th>
@@ -34,7 +32,7 @@
     <td><%= judotest.push_up%></td>
     <td><%= judotest.ABS%></td>
     <td><%= judotest.vertical_jump%></td>
-    <td><%#= link_to 'Mostrar', course %></td>
+    <td><%= link_to 'Mostrar',  judo_test_show_path %></td>
     </tr>
 <% end %>
 </tbody>
