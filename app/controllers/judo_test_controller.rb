@@ -5,6 +5,7 @@ class JudoTestController < ApplicationController
   end
 
   def show
+    @judo_test = JudoTest.find(params[:id])
     @judokas = Judoka.all
   end
 end

@@ -4,5 +4,7 @@
 
 <p>
 <strong>Judoka</strong>
-<%= @judo_tests.judoka.id %>
+<% @judo_test.judokas.each do |judoka| %>
+  <%= judoka.name %>
+<% end %>
 </p>

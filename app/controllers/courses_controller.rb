@@ -27,10 +27,11 @@ class CoursesController < ApplicationController
   # POST /courses or /courses.json
   def create
     @course = Course.new(course_params)
-    @senseis = Sensei.all
+    @sensei = Sensei.find(params[:course][:sensei_id])
     @dojos = Dojo.all
     respond_to do |format|
       if @course.save
+        @course.senseis.push(@sensei)
         format.html { redirect_to @course, notice: "Course was successfully created." }
         format.json { render :show, status: :created, location: @course }
       else

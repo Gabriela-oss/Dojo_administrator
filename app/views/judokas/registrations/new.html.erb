@@ -32,6 +32,11 @@
    <%= f.label :id_type %><br />
    <%= f.select :id_type, options_for_select(@types), prompt: "Seleccione el tipo de identificación:"%>
   </div> 
+
+   <div class="field">
+   <%= f.label :level %><br />
+   <%= f.select :level_id, options_for_select(@levels), prompt: "Seleccione su nivel:"%>
+  </div> 
   
   <div class="field">
     <%= f.label :nationality %><br />

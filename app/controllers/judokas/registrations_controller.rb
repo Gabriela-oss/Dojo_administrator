@@ -10,6 +10,7 @@ class Judokas::RegistrationsController < Devise::RegistrationsController
     @types = ['national', 'resident', 'foreign']
     @categories = Category.all
     @judo_tests = JudoTest.all
+    @levels = Level.all.pluck(:name, :id)
     super
   end
 
@@ -18,6 +19,8 @@ class Judokas::RegistrationsController < Devise::RegistrationsController
     @dojos = Dojo.all   
     @types = ['national', 'resident', 'foreign']
     @judo_tests = JudoTest.all
+    @levels = Level.all.pluck(:name, :id)
+
     super
   end
 
@@ -49,7 +52,7 @@ class Judokas::RegistrationsController < Devise::RegistrationsController
 
   #If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:dojo_id, :name, :last_name, :surname, :date_of_birth, :id_type, :nationality, :id_card, :address, :phone_number, :parental_or_responsibility, :start_date, :photo])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:dojo_id, :name, :last_name, :surname, :date_of_birth, :id_type, :nationality, :id_card, :address, :phone_number, :parental_or_responsibility, :start_date, :photo, :level_id])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
