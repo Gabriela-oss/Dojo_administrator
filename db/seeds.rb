@@ -14,6 +14,7 @@ Judoka.destroy_all
 Level.destroy_all
 Dojo.destroy_all
 JudoTest.destroy_all
+Course.destroy_all
 
 
   dojo = Dojo.create!(name: 'Judo Nobe No Suke', email: 'judo@gmail.com', address: 'Ciudad Colon')
@@ -48,28 +49,6 @@ JudoTest.destroy_all
   judo_test23 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 55, height: 156, course_naveta: 50, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60)
   judo_test24 = JudoTest.create!(date_of_test: '2000-04-12',  description: 'Muy bien hecha la prueba',  weight: 70, height: 161, course_naveta: 55, speed: 80, flexibility: 100, push_up: 90, ABS: 95, vertical_jump: 60) 
   judo_test25 = JudoTest.create!(date_of_test: '2001-12-05',  description: 'Muy bien sigue asi ',  weight: 65, height: 160, course_naveta: 52, speed: 60, flexibility: 90, push_up: 80, ABS: 100, vertical_jump: 50) 
-  
-
- 
-  
-  
-  
-  
-  
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   judo_test26 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'Aprovado', weight: 55, height: 170, course_naveta: 50, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
   judo_test28 = JudoTest.create!(date_of_test: '2003-12-08',  description: 'No Aprovado', weight: 55, height: 160, course_naveta: 50, speed: 70, flexibility: 95, push_up: 100, ABS: 100, vertical_jump: 60) 
@@ -97,7 +76,6 @@ JudoTest.destroy_all
   judo_test49 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'No Aprovado', weight: 55, height: 175, course_naveta: 20, speed: 70, flexibility: 85, push_up: 85, ABS: 100, vertical_jump: 60) 
   judo_test50 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'No Aprovado', weight: 55, height: 175, course_naveta: 20, speed: 70, flexibility: 85, push_up: 85, ABS: 100, vertical_jump: 60) 
 
-
   levels = Level.create!(name:' blanco')
   levels1 = Level.create!(name: 'amarillo')
   levels2 = Level.create!(name: 'naranja')
@@ -120,6 +98,12 @@ JudoTest.destroy_all
   categories2 = Category.create!(name: 'junior')
   categories3 = Category.create!(name: 'senior')
   categories4 = Category.create!(name: 'sensei')
+
+  course = Course.create!(name: 'Pruebas Fisicas', description: 'Hora: 7:00pm, días: Luneas a Viernes')
+  course1 = Course.create!(name: 'Pruebas de Tecnicas', description: 'Hora: 6:00pm, días: Luneas a Viernes')
+  course2 = Course.create!(name: 'Combates', description: 'Hora: 5:00pm, días: Luneas a Viernes')
+  course3 = Course.create!(name: 'Quiz', description: 'Hora: 4:00pm, días: Luneas a Viernes')
+  course4 = Course.create!(name: 'Pruebas de conociento', description: 'Hora: 9:00pm, días: Luneas a Viernes')
 
   10.times do
   sensei = Sensei.create!(
@@ -146,7 +130,6 @@ JudoTest.destroy_all
     surname: Faker::Name.last_name, 
     date_of_birth: Faker::Date.birthday(min_age: 18, max_age: 65), 
     level_id: Level.all.sample.id,
-    judo_test_id: JudoTest.all.sample.id,
     id_type: id_types.sample, 
     nationality: Faker::Nation.nationality, 
     id_card: Faker::Number.number(digits: 9), 
@@ -158,6 +141,4 @@ JudoTest.destroy_all
     puts "Judoka was created with id: #{judoka.id}"
   end
 
-  
-  
 #Sensei.create!(email: 'admin@example.com', password: 'password') if Rails.env.development?
