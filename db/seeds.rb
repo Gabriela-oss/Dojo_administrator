@@ -23,11 +23,59 @@ JudoTest.destroy_all
   dojo4 = Dojo.create!(name: 'Cano Judo Club', email: 'canojudoclub@hotmail.com', address: 'Alajuela')
 
   judo_test = JudoTest.create!(date_of_test: '2000-04-12',  description: 'Muy bien hecha la prueba',  weight: 70, height: 161, course_naveta: 55, speed: 80, flexibility: 100, push_up: 90, ABS: 95, vertical_jump: 60) 
-
   judo_test1 = JudoTest.create!(date_of_test: '2001-12-05',  description: 'Muy bien sigue asi ',  weight: 65, height: 160, course_naveta: 52, speed: 60, flexibility: 90, push_up: 80, ABS: 100, vertical_jump: 50) 
-
   judo_test2 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 55, height: 170, course_naveta: 50, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
   
+
+ 
+  
+  
+  
+  
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  judo_test25 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 55, height: 170, course_naveta: 50, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test26 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'Aprovado', weight: 55, height: 170, course_naveta: 50, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test28 = JudoTest.create!(date_of_test: '2003-12-08',  description: 'No Aprovado', weight: 55, height: 160, course_naveta: 50, speed: 70, flexibility: 95, push_up: 100, ABS: 100, vertical_jump: 60) 
+  judo_test27 = JudoTest.create!(date_of_test: '2003-12-07',  description: 'No Aprovado', weight: 55, height: 160, course_naveta: 50, speed: 70, flexibility: 95, push_up: 100, ABS: 100, vertical_jump: 60) 
+  judo_test29 = JudoTest.create!(date_of_test: '2003-12-09',  description: 'No Aprovado', weight: 55, height: 160, course_naveta: 50, speed: 70, flexibility: 95, push_up: 100, ABS: 100, vertical_jump: 60) 
+  judo_test30 = JudoTest.create!(date_of_test: '2003-12-10',  description: 'No Aprovado', weight: 57, height: 160, course_naveta: 60, speed: 70, flexibility: 95, push_up: 100, ABS: 100, vertical_jump: 60) 
+  judo_test31 = JudoTest.create!(date_of_test: '2003-12-11',  description: 'No Aprovado', weight: 57, height: 170, course_naveta: 60, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test32 = JudoTest.create!(date_of_test: '2003-12-12',  description: 'No Aprovado', weight: 57, height: 170, course_naveta: 60, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test33 = JudoTest.create!(date_of_test: '2003-12-13',  description: 'No Aprovado', weight: 57, height: 170, course_naveta: 60, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test34 = JudoTest.create!(date_of_test: '2003-12-13',  description: 'Aprovado', weight: 58, height: 180, course_naveta: 70, speed: 70, flexibility: 100, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test35 = JudoTest.create!(date_of_test: '2003-12-12',  description: 'Aprovado', weight: 58, height: 180, course_naveta: 70, speed: 70, flexibility: 100, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test36 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 58, height: 180, course_naveta: 70, speed: 70, flexibility: 100, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test37 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 58, height: 180, course_naveta: 70, speed: 70, flexibility: 100, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test38 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 59, height: 150, course_naveta: 80, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test39 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 59, height: 150, course_naveta: 80, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test40 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 59, height: 150, course_naveta: 80, speed: 70, flexibility: 95, push_up: 70, ABS: 100, vertical_jump: 60) 
+  judo_test41 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 59, height: 150, course_naveta: 80, speed: 70, flexibility: 95, push_up: 70, ABS: 100, vertical_jump: 60) 
+  judo_test42 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 55, height: 190, course_naveta: 50, speed: 70, flexibility: 90, push_up: 70, ABS: 100, vertical_jump: 60) 
+  judo_test43 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 60, height: 190, course_naveta: 10, speed: 70, flexibility: 90, push_up: 70, ABS: 100, vertical_jump: 60) 
+  judo_test44 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 60, height: 190, course_naveta: 10, speed: 70, flexibility: 90, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test45 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'Aprovado', weight: 60, height: 190, course_naveta: 10, speed: 70, flexibility: 90, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test46 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'Aprovado', weight: 60, height: 170, course_naveta: 10, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test47 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'No Aprovado', weight: 55, height: 175, course_naveta: 20, speed: 70, flexibility: 85, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test48 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'No Aprovado', weight: 55, height: 175, course_naveta: 20, speed: 70, flexibility: 85, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test49 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'No Aprovado', weight: 55, height: 175, course_naveta: 20, speed: 70, flexibility: 85, push_up: 85, ABS: 100, vertical_jump: 60) 
+  judo_test50 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'No Aprovado', weight: 55, height: 175, course_naveta: 20, speed: 70, flexibility: 85, push_up: 85, ABS: 100, vertical_jump: 60) 
+
+
   levels = Level.create!(name:' blanco')
   levels1 = Level.create!(name: 'amarillo')
   levels2 = Level.create!(name: 'naranja')
