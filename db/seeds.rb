@@ -71,7 +71,6 @@ JudoTest.destroy_all
 
 
 
-  judo_test25 = JudoTest.create!(date_of_test: '2003-12-06',  description: 'Aprovado', weight: 55, height: 170, course_naveta: 50, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
   judo_test26 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'Aprovado', weight: 55, height: 170, course_naveta: 50, speed: 70, flexibility: 95, push_up: 85, ABS: 100, vertical_jump: 60) 
   judo_test28 = JudoTest.create!(date_of_test: '2003-12-08',  description: 'No Aprovado', weight: 55, height: 160, course_naveta: 50, speed: 70, flexibility: 95, push_up: 100, ABS: 100, vertical_jump: 60) 
   judo_test27 = JudoTest.create!(date_of_test: '2003-12-07',  description: 'No Aprovado', weight: 55, height: 160, course_naveta: 50, speed: 70, flexibility: 95, push_up: 100, ABS: 100, vertical_jump: 60) 
