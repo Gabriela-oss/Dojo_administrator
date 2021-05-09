@@ -21,7 +21,7 @@ class Judokas::SessionsController < Devise::SessionsController
   protected
 
   def after_sign_in_path_for(resource)
-    judokas_show_path(resource)
+    judokas_show_path(current_judoka)
   end
 
   # If you have extra params to permit, append them to the sanitizer.

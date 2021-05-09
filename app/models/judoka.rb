@@ -7,7 +7,12 @@ class Judoka < ApplicationRecord
   belongs_to :dojo
   belongs_to :level
 
+  has_one_attached :photo
+  
   has_many :judoka_courses
   has_many :courses, through: :judoka_courses
 
+  def self.find_by_uid!(uid)
+    Judoka.find_by!("name = :p OR id = :p", p: uid)
+  end
 end
