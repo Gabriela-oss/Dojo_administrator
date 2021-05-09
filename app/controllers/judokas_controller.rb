@@ -7,4 +7,4 @@ class JudokasController < ApplicationController
     @judokas = Judoka.all
     @judoka = Judoka.find_by_uid!(params[:id])
   end
-
+end
