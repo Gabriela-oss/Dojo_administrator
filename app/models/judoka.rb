@@ -13,5 +13,4 @@ class Judoka < ApplicationRecord
   def self.find_by_uid!(uid)
     Judoka.find_by!("name = :p OR id = :p", p: uid)
   end
-
 end

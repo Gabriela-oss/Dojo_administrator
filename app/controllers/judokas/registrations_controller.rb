@@ -21,7 +21,6 @@ class Judokas::RegistrationsController < Devise::RegistrationsController
     @types = ['national', 'resident', 'foreign']
     @judo_tests = JudoTest.all
     @levels = Level.all.pluck(:name, :id)
-
     super
   end
 
