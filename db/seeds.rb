@@ -8,20 +8,20 @@
 
 id_types = ['national', 'resident', 'foreign'] # this id_types is bacause in the documentation of faker don't have this kind of types 
 
-Category.destroy_all
+Dojo.destroy_all
 Sensei.destroy_all
 Judoka.destroy_all
+Category.destroy_all
 Level.destroy_all
-Dojo.destroy_all
 JudoTest.destroy_all
 Course.destroy_all
 
 
-  dojo = Dojo.create!(name: 'Judo Nobe No Suke', email: 'judo@gmail.com', address: 'Ciudad Colon')
-  dojo1 = Dojo.create!(name: 'Alajuela codea', email: 'sanchoba04@gmail.com', address: 'Alajuela')
-  dojo2 = Dojo.create!(name: 'Avenida 04', email: 'beto_bro@hotmail.com', address: 'Cartago')
-  dojo3 = Dojo.create!(name: 'Bushi no Tamashii', email: 'joucascantevar@gmail.com', address: 'Brasil de Mora')
-  dojo4 = Dojo.create!(name: 'Cano Judo Club', email: 'canojudoclub@hotmail.com', address: 'Alajuela')
+  dojo = Dojo.create!( address: 'Ciudad Colon', email: 'judo@gmail.com', name: 'Judo Nobe No Suke')
+  dojo1 = Dojo.create!(address: 'Alajuela', email: 'sanchoba04@gmail.com', name: 'Alajuela codea')
+  dojo2 = Dojo.create!(address: 'Cartago', email: 'beto_bro@hotmail.com', name: 'Avenida 04')
+  dojo3 = Dojo.create!(address: 'Brasil de Mora', email: 'joucascantevar@gmail.com', name: 'Bushi no Tamashii')
+  dojo4 = Dojo.create!(address: 'Alajuela', email: 'canojudoclub@hotmail.com', name: 'Cano Judo Club')
 
   judo_test = JudoTest.create!(date_of_test: '2000-04-12',  description: 'Muy bien hecha la prueba',  weight: 70, height: 161, course_naveta: 55, speed: 80, flexibility: 100, push_up: 90, ABS: 95, vertical_jump: 60) 
   judo_test1 = JudoTest.create!(date_of_test: '2001-12-05',  description: 'Muy bien sigue asi ',  weight: 65, height: 160, course_naveta: 52, speed: 60, flexibility: 90, push_up: 80, ABS: 100, vertical_jump: 50) 
