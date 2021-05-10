@@ -32,11 +32,6 @@
    <%= f.label :id_type %><br />
    <%= f.select :id_type, options_for_select(@types), prompt: "Seleccione el tipo de identificación:"%>
   </div> 
-
-   <div class="field">
-   <%= f.label :level %><br />
-   <%= f.select :level_id, options_for_select(@levels), prompt: "Seleccione su nivel:"%>
-  </div> 
   
   <div class="field">
     <%= f.label :nationality %><br />
@@ -73,10 +68,12 @@
     <%= f.file_field :photo, autofocus: true, autocomplete: "Foto" %>
   </div>
 
-  <!--<div class="field">-->
-    <%#= f.label :categories %><br />
-    <%#= f.select :categories, options_from_collection_for_select(@categories, :id, :name), id:'categoria' %>
-   <!--</div>-->
+  <div class="field">
+    <%= f.label :categories %><br />
+    <%= f.select :categories, options_from_collection_for_select(@categories, :id, :name) %>
+  </div>
+
+  <div id="levels"></div>
 
   <div class="field">
     <%= f.label :email %><br />

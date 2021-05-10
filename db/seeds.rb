@@ -8,13 +8,15 @@
 
 id_types = ['national', 'resident', 'foreign'] # this id_types is bacause in the documentation of faker don't have this kind of types 
 
+JudokaCourse.destroy_all
+SenseiCourse.destroy_all
 Category.destroy_all
+Course.destroy_all
 Sensei.destroy_all
 Judoka.destroy_all
 Level.destroy_all
 Dojo.destroy_all
 JudoTest.destroy_all
-Course.destroy_all
 
 
   dojo = Dojo.create!(name: 'Judo Nobe No Suke', email: 'judo@gmail.com', address: 'Ciudad Colon')
@@ -99,12 +101,12 @@ Course.destroy_all
   categories3 = Category.create!(name: 'senior')
   categories4 = Category.create!(name: 'sensei')
 
-  course = Course.create!(name: 'Pruebas Fisicas', description: 'Hora: 7:00pm, días: Luneas a Viernes')
-  course1 = Course.create!(name: 'Pruebas de Tecnicas', description: 'Hora: 6:00pm, días: Luneas a Viernes')
-  course2 = Course.create!(name: 'Combates', description: 'Hora: 5:00pm, días: Luneas a Viernes')
-  course3 = Course.create!(name: 'Quiz', description: 'Hora: 4:00pm, días: Luneas a Viernes')
-  course4 = Course.create!(name: 'Pruebas de conociento', description: 'Hora: 9:00pm, días: Luneas a Viernes')
-
+  course = Course.create!(name: 'Pruebas Fisicas', description: 'Hora: 7:00pm, días: Luneas a Viernes', dojo_id: Dojo.all.sample.id)
+  course1 = Course.create!(name: 'Pruebas de Tecnicas', description: 'Hora: 6:00pm, días: Luneas a Viernes', dojo_id: Dojo.all.sample.id)
+  course2 = Course.create!(name: 'Combates', description: 'Hora: 5:00pm, días: Luneas a Viernes', dojo_id: Dojo.all.sample.id)
+  course3 = Course.create!(name: 'Quiz', description: 'Hora: 4:00pm, días: Luneas a Viernes', dojo_id: Dojo.all.sample.id)
+  course4 = Course.create!(name: 'Pruebas de conociento', description: 'Hora: 9:00pm, días: Luneas a Viernes', dojo_id: Dojo.all.sample.id)
+  
   10.times do
   sensei = Sensei.create!(
   email: Faker::Internet.email, 
