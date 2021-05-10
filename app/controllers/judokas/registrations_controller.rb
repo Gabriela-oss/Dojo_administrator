@@ -21,9 +21,10 @@ class Judokas::RegistrationsController < Devise::RegistrationsController
     @types = ['national', 'resident', 'foreign']
     @judo_tests = JudoTest.all
     @levels = Level.all.pluck(:name, :id)
+    @categories = Category.all    
     super
-  end
-
+  end 
+  
   # GET /resource/edit
   # def edit
   #   super

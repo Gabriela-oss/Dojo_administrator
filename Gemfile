@@ -63,3 +63,5 @@ gem 'devise'
 gem 'faker'
 
 gem 'activeadmin'
+
+gem 'chartkick'

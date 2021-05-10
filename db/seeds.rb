@@ -75,6 +75,12 @@ Course.destroy_all
   judo_test49 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'No Aprovado', weight: 55, height: 175, course_naveta: 20, speed: 70, flexibility: 85, push_up: 85, ABS: 100, vertical_jump: 60) 
   judo_test50 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'No Aprovado', weight: 55, height: 175, course_naveta: 20, speed: 70, flexibility: 85, push_up: 85, ABS: 100, vertical_jump: 60) 
 
+  categories = Category.create!(name:'infantil')
+  categories1 = Category.create!(name: 'cadete')
+  categories2 = Category.create!(name: 'junior')
+  categories3 = Category.create!(name: 'senior')
+  categories4 = Category.create!(name: 'sensei')
+
   levels = Level.create!(name:' blanco')
   levels1 = Level.create!(name: 'amarillo')
   levels2 = Level.create!(name: 'naranja')
@@ -92,12 +98,6 @@ Course.destroy_all
   levels14 = Level.create!(name: 'rojo-10mo_dan')
   levels15 = Level.create!(name: 'negro-5to_dan')
   
-  categories = Category.create!(name:'infantil')
-  categories1 = Category.create!(name: 'cadete')
-  categories2 = Category.create!(name: 'junior')
-  categories3 = Category.create!(name: 'senior')
-  categories4 = Category.create!(name: 'sensei')
-
   course = Course.create!(name: 'Pruebas Fisicas', description: 'Hora: 7:00pm, días: Luneas a Viernes')
   course1 = Course.create!(name: 'Pruebas de Tecnicas', description: 'Hora: 6:00pm, días: Luneas a Viernes')
   course2 = Course.create!(name: 'Combates', description: 'Hora: 5:00pm, días: Luneas a Viernes')

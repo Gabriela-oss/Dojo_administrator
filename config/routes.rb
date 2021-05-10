@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  
   resources :courses
   resources :dojos
   devise_for :judokas, controllers: {
