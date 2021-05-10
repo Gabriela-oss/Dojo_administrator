@@ -15,4 +15,4 @@ window.Highcharts = Highcharts
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-
+require ('packs/judoka')
