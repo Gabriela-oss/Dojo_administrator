@@ -70,7 +70,7 @@
 
   <div class="field">
     <%= f.label :categories %><br />
-    <%= f.select :categories, options_from_collection_for_select(@categories, :id, :name) %>
+    <%= f.select :categories, options_from_collection_for_select(@categories, :id, :name), prompt: 'Selecciona una categoria'  %>
   </div>
 
   <div id="levels"></div>

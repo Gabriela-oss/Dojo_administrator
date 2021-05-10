@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   devise_for :senseis, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   
+  get 'categories', to: 'categories#index'
   get 'judo_test', to: 'judo_test#index'
   get 'judokas', to: 'judokas#index', as: 'judokas'
   get 'judokas/:id', to: 'judokas#show', as: 'judokas_show'
