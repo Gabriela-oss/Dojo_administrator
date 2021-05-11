@@ -9,11 +9,13 @@ Rails.application.routes.draw do
   devise_for :senseis, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  get 'info', to: 'info#graphics', as: 'graphics'
   get 'info', to: 'info#info', as: 'info'
   get 'categories', to: 'categories#index'
   get 'judo_test', to: 'judo_test#index'
   get 'judokas', to: 'judokas#index', as: 'judokas'
   get 'judokas/:id', to: 'judokas#show', as: 'judokas_show'
+  get 'senseis/:id', to: 'senseis#show', as: 'senseis_show'
   get 'judo_test/:id', to: 'judo_test#show', as: 'judo_test_show'
   
   root to: "info#lobby"

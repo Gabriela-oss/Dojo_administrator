@@ -77,7 +77,6 @@ JudoTest.destroy_all
   judo_test49 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'No Aprovado', weight: 55, height: 175, course_naveta: 20, speed: 70, flexibility: 85, push_up: 85, ABS: 100, vertical_jump: 60) 
   judo_test50 = JudoTest.create!(date_of_test: '2003-12-05',  description: 'No Aprovado', weight: 55, height: 175, course_naveta: 20, speed: 70, flexibility: 85, push_up: 85, ABS: 100, vertical_jump: 60) 
 
-<<<<<<< HEAD
   categories = Category.create!(name:'infantil')
   categories1 = Category.create!(name: 'cadete')
   categories2 = Category.create!(name: 'junior')
@@ -106,36 +105,6 @@ JudoTest.destroy_all
   course2 = Course.create!(name: 'Combates', description: 'Hora: 5:00pm, días: Luneas a Viernes')
   course3 = Course.create!(name: 'Quiz', description: 'Hora: 4:00pm, días: Luneas a Viernes')
   course4 = Course.create!(name: 'Pruebas de conociento', description: 'Hora: 9:00pm, días: Luneas a Viernes')
-=======
-  levels = Level.create!(name:' Blanco')
-  levels1 = Level.create!(name: 'Amarillo')
-  levels2 = Level.create!(name: 'Naranja')
-  levels3 = Level.create!(name: 'Verde')
-  levels4 = Level.create!(name: 'Azul')
-  levels5 = Level.create!(name: 'Marron')
-  levels6 = Level.create!(name: 'Negro-1er_dan')
-  levels7 = Level.create!(name: 'Negro-2do_dan')
-  levels8 = Level.create!(name: 'Negro-3er_dan')
-  levels9 = Level.create!(name: 'Negro-4to_dan')
-  levels10 = Level.create!(name: 'Rojo-6to_dan')
-  levels11 = Level.create!(name: 'Rojo-7mo_dan')
-  levels12 = Level.create!(name: 'Rojo-8vo_dan')
-  levels13 = Level.create!(name: 'Rojo-9no_dan')
-  levels14 = Level.create!(name: 'Rojo-10mo_dan')
-  levels15 = Level.create!(name: 'Negro-5to_dan')
-  
-  categories = Category.create!(name:'Infantil')
-  categories1 = Category.create!(name: 'Cadete')
-  categories2 = Category.create!(name: 'Junior')
-  categories3 = Category.create!(name: 'Senior')
-  categories4 = Category.create!(name: 'Sensei')
-
-  categories.levels.push(levels, levels1, levels2, levels3, levels4, levels5)
-  categories1.levels.push(levels, levels1, levels2, levels3, levels4, levels5)
-  categories2.levels.push(levels, levels1, levels2, levels3, levels4, levels5, levels6, levels7, levels8, levels9, levels10, levels11, levels12,levels13, levels14, levels15)
-  categories3.levels.push(levels, levels1, levels2, levels3, levels4, levels5, levels6, levels7, levels8, levels9, levels10, levels11, levels12,levels13, levels14, levels15)
-  categories4.levels.push(levels, levels1, levels2, levels3, levels4, levels5, levels6, levels7, levels8, levels9, levels10, levels11, levels12,levels13, levels14, levels15)
->>>>>>> 89ed6aa6deb0f8bd7c85de904382024fd4dd9341
 
   course = Course.create!(name: 'Pruebas Fisicas', description: 'Hora: 7:00pm, días: Luneas a Viernes', dojo_id: Dojo.all.sample.id)
   course1 = Course.create!(name: 'Pruebas de Tecnicas', description: 'Hora: 6:00pm, días: Luneas a Viernes', dojo_id: Dojo.all.sample.id)

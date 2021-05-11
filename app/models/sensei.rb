@@ -12,4 +12,8 @@ class Sensei < ApplicationRecord
 
   belongs_to :level
   belongs_to :judo_test
+
+  def self.find_by_uid!(uid)
+    Sensei.find_by!("name = :p OR id = :p", p: uid)
+  end
 end
