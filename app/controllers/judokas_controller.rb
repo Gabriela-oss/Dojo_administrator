@@ -5,7 +5,7 @@ class JudokasController < ApplicationController
 
   def show
     @judokas = Judoka.all
-    @judoka = Judoka.find_by_uid!(params[:id])
+    @judoka = Judoka.find(params[:id])
   end
 
 end
