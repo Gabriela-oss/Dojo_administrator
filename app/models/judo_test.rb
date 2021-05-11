@@ -1,4 +1,4 @@
 class JudoTest < ApplicationRecord
-  has_many :senseis
-  has_many :judokas
+  belongs_to :sensei
+  belongs_to :judoka
 end

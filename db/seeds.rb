@@ -100,11 +100,6 @@ JudoTest.destroy_all
   levels14 = Level.create!(name: 'rojo-10mo_dan')
   levels15 = Level.create!(name: 'negro-5to_dan')
   
-  course = Course.create!(name: 'Pruebas Fisicas', description: 'Hora: 7:00pm, días: Luneas a Viernes')
-  course1 = Course.create!(name: 'Pruebas de Tecnicas', description: 'Hora: 6:00pm, días: Luneas a Viernes')
-  course2 = Course.create!(name: 'Combates', description: 'Hora: 5:00pm, días: Luneas a Viernes')
-  course3 = Course.create!(name: 'Quiz', description: 'Hora: 4:00pm, días: Luneas a Viernes')
-  course4 = Course.create!(name: 'Pruebas de conociento', description: 'Hora: 9:00pm, días: Luneas a Viernes')
 
   course = Course.create!(name: 'Pruebas Fisicas', description: 'Hora: 7:00pm, días: Luneas a Viernes', dojo_id: Dojo.all.sample.id)
   course1 = Course.create!(name: 'Pruebas de Tecnicas', description: 'Hora: 6:00pm, días: Luneas a Viernes', dojo_id: Dojo.all.sample.id)

@@ -11,7 +11,7 @@ class Sensei < ApplicationRecord
   has_many :courses, through: :sensei_courses
 
   belongs_to :level
-  belongs_to :judo_test
+  has_many :judo_tests
 
   def self.find_by_uid!(uid)
     Sensei.find_by!("name = :p OR id = :p", p: uid)
