@@ -100,6 +100,7 @@ JudoTest.destroy_all
   levels14 = Level.create!(name: 'rojo-10mo_dan')
   levels15 = Level.create!(name: 'negro-5to_dan')
   
+
   course = Course.create!(name: 'Pruebas Fisicas', description: 'Hora: 7:00pm, días: Luneas a Viernes', dojo_id: Dojo.all.sample.id)
   course1 = Course.create!(name: 'Pruebas de Tecnicas', description: 'Hora: 6:00pm, días: Luneas a Viernes', dojo_id: Dojo.all.sample.id)
   course2 = Course.create!(name: 'Combates', description: 'Hora: 5:00pm, días: Luneas a Viernes', dojo_id: Dojo.all.sample.id)
