@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function (){
   $('#judoka_categories').change(function(){
     var categoryId = $(this)[0].options[$(this)[0].options.selectedIndex].value
