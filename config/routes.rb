@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   devise_for :senseis, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  get 'info', to: 'info#graphics', as: 'graphics'
+  get 'info/graphics', to: 'info#graphics', as: 'graphics'
   get 'info', to: 'info#info', as: 'info'
   get 'categories', to: 'categories#index'
   get 'judo_test', to: 'judo_test#index'

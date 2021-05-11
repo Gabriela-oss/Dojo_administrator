@@ -1,5 +1,8 @@
 class InfoController < ApplicationController
   def info
+    @dojos = Dojo.all
+    @judokas = Judoka.all
+    @senseis = Sensei.all
   end
 
   def lobby
