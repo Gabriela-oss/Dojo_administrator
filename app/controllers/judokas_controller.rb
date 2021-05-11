@@ -1,4 +1,6 @@
 class JudokasController < ApplicationController
+  before_action authenticate_judoka!  
+
   def index
     @judokas = Judoka.all
   end

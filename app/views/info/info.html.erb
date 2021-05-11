@@ -1,10 +1,11 @@
 <div class="row">
     <div class="item col-sm">
-     <%= link_to 'Perfil', root_path %>
+      <%= link_to root_path do %>
      <%= image_tag asset_path('perfil.png'), size: "80x80"%>
+     <% end %> 
     </div>
     <div class="item col-sm">
-      <%= link_to toot_path do %>
+      <%= link_to root_path do %>
      <%= image_tag asset_path('dojo.png'), size: "80x80"%>
     <% end %> 
     </div>
