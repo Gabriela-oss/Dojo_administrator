@@ -2,6 +2,7 @@
 
 class Judokas::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
+
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
@@ -10,6 +11,7 @@ class Judokas::RegistrationsController < Devise::RegistrationsController
     @types = ['national', 'resident', 'foreign']
     @categories = Category.all
     @judo_tests = JudoTest.all
+    @levels = Level.all.pluck(:name, :id)
     super
   end
 
@@ -18,9 +20,11 @@ class Judokas::RegistrationsController < Devise::RegistrationsController
     @dojos = Dojo.all   
     @types = ['national', 'resident', 'foreign']
     @judo_tests = JudoTest.all
+    @levels = Level.all.pluck(:name, :id)
+    @categories = Category.all    
     super
-  end
-
+  end 
+  
   # GET /resource/edit
   # def edit
   #   super
@@ -49,7 +53,11 @@ class Judokas::RegistrationsController < Devise::RegistrationsController
 
   #If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:dojo_id, :name, :last_name, :surname, :date_of_birth, :id_type, :nationality, :id_card, :address, :phone_number, :parental_or_responsibility, :start_date, :photo])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:dojo_id, :name, :last_name, :surname, :date_of_birth, :id_type, :nationality, :id_card, :address, :phone_number, :parental_or_responsibility, :start_date, :photo, :level_id])
+  end
+
+  def after_sign_in_path_for(resource)
+    judokas_show_path(current_judoka)
   end
 
   # If you have extra params to permit, append them to the sanitizer.

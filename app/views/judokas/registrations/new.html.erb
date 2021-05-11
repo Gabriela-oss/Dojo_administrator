@@ -55,7 +55,7 @@
 
   <div class="field">
     <%= f.label :parental_or_responsibility %><br />
-    <%= f.text_field :parental_or_responsibility, autofocus: true, autocomplete: "Padre o responsable" %>
+    <%= f.text_field :parental_or_responsibility, autocomplete: "No pertenece", placeholder: 'De ser necesario' %>
   </div>
 
   <div class="field">
@@ -65,13 +65,15 @@
   
   <div class="field">
     <%= f.label :photo %><br />
-    <%= f.text_field :photo, autofocus: true, autocomplete: "Foto" %>
+    <%= f.file_field :photo, autofocus: true, autocomplete: "Foto" %>
   </div>
 
-  <!--<div class="field">-->
-    <%#= f.label :categories %><br />
-    <%#= f.select :categories, options_from_collection_for_select(@categories, :id, :name), id:'categoria' %>
-   <!--</div>-->
+  <div class="field">
+    <%= f.label :categories %><br />
+    <%= f.select :categories, options_from_collection_for_select(@categories, :id, :name), prompt: 'Selecciona una categoria'  %>
+  </div>
+
+  <div id="levels"></div>
 
   <div class="field">
     <%= f.label :email %><br />
