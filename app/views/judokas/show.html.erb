@@ -7,7 +7,7 @@
   <% if @judoka.photo.attached? %>
     <%= image_tag @judoka.photo, size: '200x200' , class: "rounded-circle", alt: "Cinque Terre"%>
   <% end %>
-  <%= link_to 'Editar', new_judoka_registration_path(@judoka) %> 
+  <%= link_to 'Editar', edit_judoka_registration_path %> 
   </div>
 </article>
 <article class="event">

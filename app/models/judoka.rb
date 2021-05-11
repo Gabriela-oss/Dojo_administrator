@@ -11,6 +11,7 @@ class Judoka < ApplicationRecord
 
   has_one_attached :photo
   
+  has_many :judo_tests
   has_many :judoka_courses
   has_many :courses, through: :judoka_courses
 
