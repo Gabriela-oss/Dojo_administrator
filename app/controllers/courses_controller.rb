@@ -17,9 +17,6 @@ class CoursesController < ApplicationController
     @dojos = Dojo.all
   end
 
-  def lobby
-  end
-
   # GET /courses/1/edit
   def edit
   end
