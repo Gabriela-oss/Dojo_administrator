@@ -1,0 +1,7 @@
+
+<%= pie_chart Category.group(:name).count %>
+
+<%= pie_chart Level.group(:name).count %>
+
+    <button type="button" class="btn btn-danger"><%= link_to 'Judokas', new_judoka_registration_path %></button>
+  <button type="button" class="btn btn-danger"><%= link_to 'Senseis', new_admin_sensei_path %></button> 
