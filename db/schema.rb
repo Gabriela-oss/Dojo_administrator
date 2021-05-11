@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_07_174548) do
+ActiveRecord::Schema.define(version: 2021_05_11_211556) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,6 +87,13 @@ ActiveRecord::Schema.define(version: 2021_05_07_174548) do
     t.integer "vertical_jump", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "judo_tests_judokas", id: false, force: :cascade do |t|
+    t.bigint "judo_test_id", null: false
+    t.bigint "judoka_id", null: false
+    t.index ["judo_test_id", "judoka_id"], name: "index_judo_tests_judokas_on_judo_test_id_and_judoka_id"
+    t.index ["judoka_id", "judo_test_id"], name: "index_judo_tests_judokas_on_judoka_id_and_judo_test_id"
   end
 
   create_table "judoka_courses", force: :cascade do |t|
