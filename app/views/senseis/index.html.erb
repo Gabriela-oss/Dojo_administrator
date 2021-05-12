@@ -1,3 +1,23 @@
+<h1>Senseis</h1>
+
+<table>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>ID</th>
+<th colspan="3"></th>
+</tr>
+</thead>
+
+<tbody>
 <% @senseis.each do |sensei| %>
-  <%= link_to sensei.name, senseis_show_path(sensei.id) %>
+<tr>
+<td><%= sensei.name %></td>
+<td><%= sensei.id_card %></td>
+<td><%= link_to sensei.name, senseis_show_path(sensei.id) %></td>
+</tr>
 <% end %>
+</tbody>
+</table>
+
+<br> 

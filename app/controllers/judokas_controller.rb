@@ -10,4 +10,12 @@ class JudokasController < ApplicationController
     @judoka = Judoka.find(params[:id])
   end
 
+  # @judoka = current_judokas ? Judokas.find(params[:id]) : current_judokas 
+  # @sensei = current_senseis ? Senseis.find(params[:id]) : current_senseis 
+  # if current_judokas?
+    
+  # else
+
+  # end
+
 end

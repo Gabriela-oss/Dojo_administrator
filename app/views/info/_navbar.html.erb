@@ -25,6 +25,7 @@
       <%= link_to 'Desconectarse', destroy_judoka_session_path, method: :delete%>
       <% else %>
       <%= link_to '(Iniciar Sesion con Judoka)', new_judoka_session_path %>
+      <br>
       <%= link_to '(Iniciar Sesion con Sensei)', new_sensei_session_path %>
         <%end %>
       </div>

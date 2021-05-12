@@ -11,35 +11,21 @@
 <div id="content">
   <div class="row align-self-center">
       <div class="item col-sm">
-        <%= link_to root_path do %>
-      <%= image_tag asset_path('perfil.png'), size: "150x150"%>
-      <% end %> 
+      <a href="<%= judokas_show_path(current_judoka) %>"><img src="<%= asset_path('perfil.png') %>" style="width:150px;height:150px;" alt=""></a>
       <div class='p-4'>
-      <button type="button" class="btn btn-secondary p-1 my-2 ">Mi Perfil</button>
+      <%= link_to "Mi Perfil", judokas_show_path(current_judoka), class: "btn btn-secondary p-1 my-2 mx-3"  %>
       </div>
       </div>
       <div class="item col-sm">
-        <%= link_to root_path do %>
-      <%= image_tag asset_path('dojo.png'), size: "150x150"%>
-      <% end %> 
+      <a href="<%= dojo_path(current_judoka.dojo_id) %>"><img src="<%= asset_path('dojo.png') %>" style="width:150px;height:150px;" alt=""></a>
       <div class="p-4">
-      <button type="button" class="btn btn-secondary p-1 my-2 mx-3">Mi Dojo</button>
+      <%= link_to "Mi Dojo", dojo_path(current_judoka.dojo_id), class: "btn btn-secondary p-1 my-2 mx-3"  %>
       </div>
       </div>
       <div class="item col-sm">
-        <%= link_to root_path do %>
-      <%= image_tag asset_path('sensei.png'), size: "150x150"%>
-      <% end %> 
+      <a href="<%= mis_senseis_path %>"><img src="<%= asset_path('sensei.png') %>" style="width:150px;height:150px;" alt=""></a>
       <div class="p-4">
-      <button type="button" class="btn btn-secondary p-1 my-2">Mis Senseis </button>
-      </div>
-      </div>
-      <div class="item col-sm">
-        <%= link_to root_path do %>
-      <%= image_tag asset_path('clases.png'), size: "150x150"%>
-      <% end %> 
-      <div class="p-4">
-      <button type="button" class="btn btn-secondary p-1 my-2 mx-3">Mi Clase</button>
+      <%= link_to "Mis Senseis", mis_senseis_path, class: "btn btn-secondary p-1 my-2 mx-3"  %>
       </div>
       </div>
   </div>
