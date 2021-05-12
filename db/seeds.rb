@@ -82,7 +82,6 @@ dojo = Dojo.create!(name: 'Judo Nobe No Suke', email: 'judo@gmail.com', address:
     surname: Faker::Name.last_name, 
     id_type: id_types.sample, 
     level_id: Level.all.sample.id,
-    judo_test_id: JudoTest.all.sample.id,  
     nationality: Faker::Nation.nationality,
     id_card:Faker::Number.number(digits: 9), 
     phone_number: Faker::PhoneNumber.cell_phone_in_e164)
