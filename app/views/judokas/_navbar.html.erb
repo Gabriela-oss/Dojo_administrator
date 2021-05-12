@@ -14,8 +14,8 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          <% if judoka_signed_in? %>
-    <%= link_to 'Desconectarse', destroy_judoka_session_path, method: :delete%>
-    <%if current_judoka %>
+          <%= link_to 'Desconectarse', destroy_judoka_session_path, method: :delete%>
+         <%if current_judoka %>
     <li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><%= current_judoka.email %></a>
     </li>
