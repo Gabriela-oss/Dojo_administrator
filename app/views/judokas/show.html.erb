@@ -1,67 +1,31 @@
 <section>
 <%= render 'navbar' %>
 </section>
-<h1 class="text-center p-5">Mi Perfil</h1>
-<div class="d-flex justify-content-center">
-<div class="d-inline-flex p-2 bd-highlight">
-  <article class="event">
-    <div class="relative_width">
-    <div class="field mx-5 px-5">
+
+<h1 class="text-center">Mi Perfil</h1>
+
+  <div class="container">
+  <div class="row">
+    <div class="item col-sm-5">
     <% if @judoka.photo.attached? %>
       <%= image_tag @judoka.photo, size: '200x200' , class: "rounded-circle", alt: "Cinque Terre"%>
     <% end %>
     </div>
-  </article>
-</div>
 
-  <article class="event">
-<div class="d-flex flex-column bd-highlight mb-3">
-    <div class="talk_text">
-        <div class="container">
-        <p><strong>Nombre: </strong><%= @judoka.name %></p>
-        <p><strong>Primer apellido: </strong><%= @judoka.last_name %></p>
-        <p><strong>Segundo apellido: </strong><%= @judoka.surname %></p>
-        <p><strong>Fecha de nacimiento: </strong><%= @judoka.date_of_birth %></p>
-        <p><strong>Tipo de identificación: </strong><%= @judoka.id_type %></p>
-        <p><strong>Nacionalidad: </strong><%= @judoka.nationality %></p>
-        <p><strong>Número de identificación: </strong><%= @judoka.id_card %></p>
-        <p><strong>Dirección: </strong><%= @judoka.address %></p>
-        <p><strong>Número de tel: </strong><%= @judoka.phone_number %></p>
-        <p><strong>Encargado legal: </strong><%= @judoka.parental_or_responsibility %></p>
-        <p><strong>Fecha de inicio: </strong><%= @judoka.start_date %></p>
+
+    <div class="azul col-sm-7">
+          <p><strong>Nombre: </strong><%= @judoka.name %></p>
+          <p><strong>Primer apellido: </strong><%= @judoka.last_name %></p>
+          <p><strong>Segundo apellido: </strong><%= @judoka.surname %></p>
+          <p><strong>Fecha de nacimiento: </strong><%= @judoka.date_of_birth %></p>
+          <p><strong>Tipo de identificación: </strong><%= @judoka.id_type %></p>
+          <p><strong>Nacionalidad: </strong><%= @judoka.nationality %></p>
+          <p><strong>Número de identificación: </strong><%= @judoka.id_card %></p>
+          <p><strong>Dirección: </strong><%= @judoka.address %></p>
+          <p><strong>Número de tel: </strong><%= @judoka.phone_number %></p>
+          <p><strong>Encargado legal: </strong><%= @judoka.parental_or_responsibility %></p>
+          <p><strong>Fecha de inicio: </strong><%= @judoka.start_date %></p>
+          <%= link_to 'Editar', edit_judoka_registration_path %> 
       </div>
     </div>
-</div>
-   <button type="button" class="btn btn-danger"> <%= link_to 'Editar', new_judoka_registration_path(@judoka) %> </button>
-  </article>
-  </div>
-</div>
 
-
-
-<div class="container">
-  <div class="row">
-
- <div class="azul col-sm-6">
-      <% if @judoka.photo.attached? %>
-      <%= image_tag @judoka.photo, size: '200x200' , class: "rounded-circle", alt: "Cinque Terre"%>
-    <% end %>
-    </div>
-  </div>
-  
-    <div class="item col-sm-6">
-         <div class="container">
-        <p><strong>Nombre: </strong><%= @judoka.name %></p>
-        <p><strong>Primer apellido: </strong><%= @judoka.last_name %></p>
-        <p><strong>Segundo apellido: </strong><%= @judoka.surname %></p>
-        <p><strong>Fecha de nacimiento: </strong><%= @judoka.date_of_birth %></p>
-        <p><strong>Tipo de identificación: </strong><%= @judoka.id_type %></p>
-        <p><strong>Nacionalidad: </strong><%= @judoka.nationality %></p>
-        <p><strong>Número de identificación: </strong><%= @judoka.id_card %></p>
-        <p><strong>Dirección: </strong><%= @judoka.address %></p>
-        <p><strong>Número de tel: </strong><%= @judoka.phone_number %></p>
-        <p><strong>Encargado legal: </strong><%= @judoka.parental_or_responsibility %></p>
-        <p><strong>Fecha de inicio: </strong><%= @judoka.start_date %></p>
-      </div>
-    </div>
-   

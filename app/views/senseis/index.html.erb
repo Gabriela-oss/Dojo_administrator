@@ -1,0 +1,33 @@
+<% @senseis.each do |sensei| %>
+  
+
+  <%#= link_to %>
+<% end %>
+
+<h1>Senseis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Dojo</th>
+      <th>ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @judokas.each do |judoka| %>
+      <tr>
+        <td><%= judoka.name %></td>
+        <td><%= judoka.dojo.name %></td>
+        <td><%= judoka.id_card %></td>
+        <td><%= link_to sensei.name, senseis_show_path(sensei.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'Nuevo Curso', new_course_path %>

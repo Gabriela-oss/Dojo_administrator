@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_07_174548) do
+ActiveRecord::Schema.define(version: 2021_05_12_020312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,6 +87,10 @@ ActiveRecord::Schema.define(version: 2021_05_07_174548) do
     t.integer "vertical_jump", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "judoka_id", null: false
+    t.bigint "sensei_id", null: false
+    t.index ["judoka_id"], name: "index_judo_tests_on_judoka_id"
+    t.index ["sensei_id"], name: "index_judo_tests_on_sensei_id"
   end
 
   create_table "judoka_courses", force: :cascade do |t|
@@ -167,9 +171,7 @@ ActiveRecord::Schema.define(version: 2021_05_07_174548) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "level_id", null: false
-    t.bigint "judo_test_id", null: false
     t.index ["email"], name: "index_senseis_on_email", unique: true
-    t.index ["judo_test_id"], name: "index_senseis_on_judo_test_id"
     t.index ["level_id"], name: "index_senseis_on_level_id"
     t.index ["reset_password_token"], name: "index_senseis_on_reset_password_token", unique: true
   end
@@ -177,6 +179,8 @@ ActiveRecord::Schema.define(version: 2021_05_07_174548) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "courses", "dojos"
+  add_foreign_key "judo_tests", "judokas"
+  add_foreign_key "judo_tests", "senseis"
   add_foreign_key "judoka_courses", "courses"
   add_foreign_key "judoka_courses", "judokas"
   add_foreign_key "judokas", "dojos"
@@ -185,6 +189,5 @@ ActiveRecord::Schema.define(version: 2021_05_07_174548) do
   add_foreign_key "sensei_courses", "senseis"
   add_foreign_key "sensei_dojos", "dojos"
   add_foreign_key "sensei_dojos", "senseis"
-  add_foreign_key "senseis", "judo_tests"
   add_foreign_key "senseis", "levels"
 end

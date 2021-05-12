@@ -14,14 +14,22 @@
   </head>
 
   <body>
-
-    </div>
-    </div>
-    </nav> 
-
+  
+    <%= yield %>
+    <div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    </div>
 
+    <footer id="contact" class="dark">
+    <i class="fab fa-twitter-square fa-5x"></i>
+    <i class="fab fa-linkedin fa-5x"></i>
+    <i class="fab fa-facebook fa-5x"></i>
+    <i class="fab fa-instagram fa-5x"></i>
+    <p> MiDojoCR 2020.Todos los derechos reservados.
+    <br> 
+    Costa Rica Pura Vida</p>
+  </footer>
+  
   </body>
 </html>
