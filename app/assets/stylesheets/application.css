@@ -14,10 +14,16 @@
  *= require_self
  */
 
- 
- .talk_img{
-  width: 25%;
-  vertical-align: middle;
+
+.contenido { 
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); 
 }
 
-
+.bloque { 
+  height:130px;
+  margin: 0;
+} 
