@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
 
   get 'mis_senseis', to: 'senseis#index', as: 'mis_senseis'
-  get 'info', to: 'info#graphics', as: 'graphics'
+  get 'graphics', to: 'info#graphics', as: 'graphics'
   get 'info', to: 'info#info', as: 'info'
   get 'categories', to: 'categories#index'
   get 'judo_test', to: 'judo_test#index'
