@@ -8,6 +8,10 @@ class DojosController < ApplicationController
 
   # GET /dojos/1 or /dojos/1.json
   def show
+    respond_to do |format|
+      format.js { render layout: false }
+      format.html { render :show }
+    end
   end
 
   # GET /dojos/new

@@ -20,7 +20,7 @@
         <td><%= dojo.email %></td>
         <td><%= dojo.address %></td>
         <td><%= dojo.active %></td>
-        <td><%= link_to 'Mostrar', dojo, class:'btn btn-danger' %></td>
+        <td><%= link_to 'Mostrar', dojo, class:'btn btn-danger', remote: true %></td>
         <td><%= link_to 'Editar', edit_dojo_path(dojo), class:'btn btn-danger' %></td>
         <td><%= link_to 'Destruir', dojo, method: :delete, data: { confirm: '¿Estás seguro?' }, class:'btn btn-danger' %></td>
       </tr>
@@ -31,3 +31,5 @@
 <br>
 
 <%= link_to 'Nuevo Dojo', new_dojo_path, class:'btn btn-danger' %> | <%= link_to 'Atrás', info_path, class:'btn btn-danger'  %>
+
+<div id="dojo-content"></div>
