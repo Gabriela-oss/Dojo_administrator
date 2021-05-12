@@ -1,5 +1,5 @@
 ActiveAdmin.register Sensei do
-  permit_params :email, :password, :password_confirmation, :name, :last_name, :surname, :id_type, :nationality, :id_card, :phone_number, :photo, :active
+  permit_params :email, :password, :password_confirmation, :name, :last_name, :surname, :id_type, :nationality, :id_card, :phone_number, :active
 
   index do
     selectable_column
@@ -26,7 +26,6 @@ ActiveAdmin.register Sensei do
       f.input :nationality
       f.input :id_card
       f.input :phone_number
-      f.input :photo
       f.input :active, as: :boolean 
       f.input :email
       f.input :password
