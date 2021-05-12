@@ -1,5 +1,6 @@
 class DojosController < ApplicationController
   before_action :set_dojo, only: %i[ show edit update destroy ]
+  before_action :authenticate_judoka!
 
   # GET /dojos or /dojos.json
   def index
@@ -8,6 +9,10 @@ class DojosController < ApplicationController
 
   # GET /dojos/1 or /dojos/1.json
   def show
+    respond_to do |format|
+      format.js { render layout: false }
+      format.html { render :show }
+    end
   end
 
   # GET /dojos/new
