@@ -19,6 +19,8 @@ class CoursesController < ApplicationController
 
   # GET /courses/1/edit
   def edit
+    @dojos = Dojo.all
+    @senseis = Sensei.all
   end
 
   # POST /courses or /courses.json
@@ -40,6 +42,9 @@ class CoursesController < ApplicationController
 
   # PATCH/PUT /courses/1 or /courses/1.json
   def update
+    @course = Course.new(course_params)
+    @sensei = Sensei.find(params[:course][:sensei_id])
+    @dojos = Dojo.all
     respond_to do |format|
       if @course.update(course_params)
         format.html { redirect_to @course, notice: "Course was successfully updated." }
