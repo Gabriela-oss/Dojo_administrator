@@ -2,21 +2,19 @@
 <%= render 'navbar' %>
 </section>
 
-<h1 class="text-center">Mi Perfil</h1>
-
-  <div class="container">
+<h1 class="text-center p-5">Mi Perfil</h1>
+  <div class="container py-5">
   <div class="row">
-    <div class="item col-sm-5">
+    <div class="item col-sm-5 p-5 center-block">
     <% if @judoka.photo.attached? %>
       <%= image_tag @judoka.photo, size: '200x200' , class: "rounded-circle", alt: "Cinque Terre"%>
     <% end %>
     <div class="my-3 mx-5">
     <%= link_to 'Editar', edit_judoka_registration_path %> 
+    <button type="button" class="btn btn-danger "> <%= link_to 'Editar', edit_judoka_registration_path %> </button>
     </div>
     </div>
-
-
-    <div class="azul col-sm-7">
+    <div class="azul col-sm-5">
           <p><strong>Nombre: </strong><%= @judoka.name %></p>
           <p><strong>Primer apellido: </strong><%= @judoka.last_name %></p>
           <p><strong>Segundo apellido: </strong><%= @judoka.surname %></p>
