@@ -2,14 +2,14 @@
 
 <p>
   <strong>Dojo:</strong>
-  <%= @course.dojo_id %>
+  <%= @course.dojo.name %>
 </p>
 
 <p>
   <strong>Sensei:</strong>
   <% @course.senseis.each do |sensei| %>
 
-  <%= sensei.name %>
+  <%= mis_senseis_path %>
 
   <% end %>
 </p>

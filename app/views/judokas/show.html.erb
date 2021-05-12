@@ -25,6 +25,7 @@
           <p><strong>Número de tel: </strong><%= @judoka.phone_number %></p>
           <p><strong>Encargado legal: </strong><%= @judoka.parental_or_responsibility %></p>
           <p><strong>Fecha de inicio: </strong><%= @judoka.start_date %></p>
+          <%= link_to 'Información', info_path, class:'btn btn-danger'  %> 
       </div>
     </div>
 
