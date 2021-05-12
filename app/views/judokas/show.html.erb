@@ -10,6 +10,9 @@
     <% if @judoka.photo.attached? %>
       <%= image_tag @judoka.photo, size: '200x200' , class: "rounded-circle", alt: "Cinque Terre"%>
     <% end %>
+    <div class="my-3 mx-5">
+    <%= link_to 'Editar', edit_judoka_registration_path %> 
+    </div>
     </div>
 
 
@@ -25,7 +28,6 @@
           <p><strong>Número de tel: </strong><%= @judoka.phone_number %></p>
           <p><strong>Encargado legal: </strong><%= @judoka.parental_or_responsibility %></p>
           <p><strong>Fecha de inicio: </strong><%= @judoka.start_date %></p>
-          <%= link_to 'Editar', edit_judoka_registration_path %> 
       </div>
     </div>
 
