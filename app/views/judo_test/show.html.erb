@@ -2,13 +2,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-<strong>Judoka</strong>
-<% @judo_test.each do |judoka| %>
-  <%= judoka.name %>
 
-<% end %>
-</p>
 
 <section>
   <div class="container">
@@ -22,5 +16,7 @@
     <p><strong>Push up: </strong><%= @judo_test.push_up %></p>
     <p><strong>Abdominales: </strong><%= @judo_test.ABS %></p>
     <p><strong>Salto vertical: </strong><%= @judo_test.vertical_jump %></p>
+    <p><strong>Sensei a cargo de la prueba: </strong><%= @judo_test.sensei.name %></p>
+    <p><strong>Judoka: </strong><%= @judo_test.judoka.name %></p>
   </div>
 </section>

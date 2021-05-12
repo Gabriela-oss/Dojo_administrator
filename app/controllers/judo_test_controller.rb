@@ -6,6 +6,6 @@ class JudoTestController < ApplicationController
 
   def show
     @judo_test = JudoTest.find(params[:id])
-    @judokas = Judoka.all
+    @judokas = JudoTest.where(:sensei_id => 62).all
   end
 end
