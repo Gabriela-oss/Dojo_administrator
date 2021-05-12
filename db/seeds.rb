@@ -18,7 +18,7 @@ Level.destroy_all
 Dojo.destroy_all
 JudoTest.destroy_all
 
-dojo = Dojo.create!(name: 'Judo Nobe No Suke', email: 'judo@gmail.com', address: 'Ciudad Colon')
+  dojo = Dojo.create!(name: 'Judo Nobe No Suke', email: 'judo@gmail.com', address: 'Ciudad Colon')
   dojo1 = Dojo.create!(name: 'Alajuela codea', email: 'sanchoba04@gmail.com', address: 'Alajuela')
   dojo2 = Dojo.create!(name: 'Avenida 04', email: 'beto_bro@hotmail.com', address: 'Cartago')
   dojo3 = Dojo.create!(name: 'Bushi no Tamashii', email: 'joucascantevar@gmail.com', address: 'Brasil de Mora')

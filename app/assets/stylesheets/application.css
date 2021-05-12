@@ -23,3 +23,7 @@
   -webkit-transform: translate(-50%, -50%); 
 }
 
+.bloque { 
+  height:130px;
+  margin: 0;
+} 
