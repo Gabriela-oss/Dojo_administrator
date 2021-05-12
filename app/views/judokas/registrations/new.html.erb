@@ -102,13 +102,14 @@
         <%= f.label :confirmación_contraseña %><br />
         <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       </div>
+
+        <%= render "judokas/shared/links" %>
     </div>
       <div class="actions col-sm-6">
         <%= f.submit "Registrate", class:'btn btn-danger' %>
       </div>
     <% end %>
-
-    <%= render "judokas/shared/links" %>
+  
   </div>
 </div>
 
