@@ -1,19 +1,21 @@
-<div class="container p-5 ">
+<div class="container p-3 ">
   <div class="row border p-2">
     <div class="item col-sm-4">
-      <%= pie_chart Category.group(:name).count %>
+      <%= pie_chart Category.group(:name).count, colors: ["#cc0000", "#b30000", "#ff7733", "#990000", "#800000", "#660000"], dataset: {borderWidth: 1.5}  %>
     </div>
     <div class="azul col-sm-8">
-      <%= pie_chart Level.group(:name).count %>
+      <%= pie_chart Level.group(:name).count,colors: ["#800000", "#b30000", "#ffffff", "#003300", "#ff1a1a", "#ff6600", "#003399", "#ff0000", "##000000", "#1a1a1a", "#660000", "#800000", "#404040", "#ff9900"], dataset: {borderWidth: 1.5}  %>
     </div>
   </div>
-<br>
-<br>
-<br>
-<div class='d-flex justify-content-around'>
-<p> ¿Con cuál usuario querés iniciar sesión?</p>
-</div>
-<div class='d-flex justify-content-around' >
-  <button type="button" class="btn btn-danger "><%= link_to 'Judokas', new_judoka_registration_path %></button>
-  <button type="button" class="btn btn-danger "><%= link_to 'Senseis', new_admin_sensei_path %></button> 
-</div>
+  <br>
+  <br>
+  <br>
+  <div class='d-flex justify-content-around'>
+    <p> ¿Con cuál usuario querés iniciar sesión?</p>
+  </div>
+  <div class='d-flex justify-content-around' >
+    <%= link_to 'Judokas', new_judoka_registration_path, class:'btn btn-danger' %>
+    <%= link_to 'Senseis', new_admin_sensei_path, class:'btn btn-danger'  %>
+  </div>
+
+
