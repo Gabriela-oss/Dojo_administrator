@@ -1,3 +1,4 @@
+<body class="new_dojo">
 <%= form_with(model: dojo) do |form| %>
   <% if dojo.errors.any? %>
     <div id="error_explanation">
@@ -11,27 +12,66 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+<div class="row">
+<div class="col-sm"></div>
+<div class="col-sm">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+          </div>
+          <%= form.text_field :name, :class => "form-control", autocomplete: "off" , placeholder: "Nombre" %>
+        </div>
+      </div>
+      <div class="col-sm"></div>
+</div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
+<div class="row">
+<div class="col-sm"></div>
+<div class="col-sm">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+          </div>
+          <%= form.text_field :email, :class => "form-control", autocomplete: "off" , placeholder: "Email" %>
+        </div>
+      </div>
+      <div class="col-sm"></div>
+</div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
-  </div>
+ <div class="row">
+<div class="col-sm"></div>
+<div class="col-sm">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+          </div>
+          <%= form.text_field :address, :class => "form-control", autocomplete: "off" , placeholder: "Dirección" %>
+        </div>
+      </div>
+      <div class="col-sm"></div>
+</div>
 
-  <div class="field">
-    <%= form.label :active %>
-    <%= form.check_box :active %>
-  </div>
+<div class="row">
+<div class="col-sm"></div>
+   <div class="col-sm">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+          <%= form.check_box :active %>
+          </div>
+        </div>
+        <%= form.label :active, :class => "form-control", autocomplete: "off" , placeholder: "Usuario activo?" %>
+      </div>
+    </div>
+<div class="col-sm"></div>
+</div>
+ 
 
-  <div class="actions">
-    <%= form.submit %>
+
+  <div class="actions text-center">
+      <button type="submit" class="btn btn-info btn-lg">Enviar</button>
+    </div>
   </div>
-<% end %>
+  <% end %> 
+  </body>
+</div>

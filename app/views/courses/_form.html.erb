@@ -1,3 +1,5 @@
+<body class="new_course">
+
 <%= form_with(model: course) do |form| %>
   <% if course.errors.any? %>
     <div id="error_explanation">
@@ -11,29 +13,61 @@
     </div>
   <% end %>
 
-
-<div class="field">
-    <%= form.label :dojo_id %>
-    <%= form.select :dojo_id, options_from_collection_for_select(@dojos, :id, :name), prompt: 'Seleccionar el Dojo' %>
-  </div>
+  <div class="row">
+    <div class="col-sm"></div>
+        <div class="col-sm">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+          <%= form.select(:dojo_id, options_from_collection_for_select(@dojos, :id, :name),prompt: 'Seleccionar el Dojo' ) %>
+          </div>
+        </div>
+        <div class="col-sm"></div>
+    </div>
   
+  <div class="row">
+<div class="col-sm"></div>
+<div class="col-sm">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+          </div>
+          <%= form.text_field :name, :class => "form-control", autocomplete: "off" , placeholder: "Nombre" %>
+        </div>
+      </div>
+      <div class="col-sm"></div>
+</div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+  <div class="row">
+    <div class="col-sm"></div>
+        <div class="col-sm">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+          <%= form.select(:sensei_id, options_from_collection_for_select(@senseis, :id, :name),prompt: 'Seleccionar el sensei' ) %>
+          </div>
+        </div>
+        <div class="col-sm"></div>
+    </div>
 
-    <div class="field">
-    <%= form.label :sensei_id %>
-    <%= form.select :sensei_id, options_from_collection_for_select(@senseis, :id, :name), prompt: 'Select a sensei' %>
-  </div>
+    <div class="row">
+<div class="col-sm"></div>
+<div class="col-sm">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+          </div>
+          <%= form.text_field :description, :class => "form-control", autocomplete: "off" , placeholder: "Descripción" %>
+        </div>
+      </div>
+      <div class="col-sm"></div>
+</div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+<div class="actions text-center">
+      <button type="submit" class="btn btn-info btn-lg">Enviar</button>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+  <% end %> 
+</body>
