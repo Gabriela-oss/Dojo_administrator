@@ -1,5 +1,6 @@
 class DojosController < ApplicationController
   before_action :set_dojo, only: %i[ show edit update destroy ]
+  before_action :authenticate_judoka!
 
   # GET /dojos or /dojos.json
   def index
