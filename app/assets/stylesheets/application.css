@@ -20,4 +20,19 @@
   vertical-align: middle;
 }
 
+ body{
+  background-image: url("/app/assets/images/judo.png");
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+ }
+
+ .new_course {
+   background-color: rgb(243, 214, 150);
+ }
+ 
+ .new_dojo {
+  background-color: rgb(153, 243, 150);
+}
 
