@@ -1,19 +1,15 @@
 <h1>Mi Perfil</h1>
-<section id="events" class="sweet_brown">
-<article class="event">
 
-  <div class="relative_width">
-  <div class="field ">
-  <% if @judoka.photo.attached? %>
-    <%= image_tag @judoka.photo, size: '200x200' , class: "rounded-circle", alt: "Cinque Terre"%>
-  <% end %>
-  <%= link_to 'Editar', edit_judoka_registration_path %> 
-  </div>
-</article>
-<article class="event">
-    <div class="talk_text">
-      <section>
-        <div class="container">
+  <div class="container">
+  <div class="row">
+    <div class="item col-sm-5">
+    <% if @judoka.photo.attached? %>
+      <%= image_tag @judoka.photo, size: '200x200' , class: "rounded-circle", alt: "Cinque Terre"%>
+    <% end %>
+    </div>
+
+
+    <div class="azul col-sm-7">
           <p><strong>Nombre: </strong><%= @judoka.name %></p>
           <p><strong>Primer apellido: </strong><%= @judoka.last_name %></p>
           <p><strong>Segundo apellido: </strong><%= @judoka.surname %></p>
@@ -25,9 +21,7 @@
           <p><strong>Número de tel: </strong><%= @judoka.phone_number %></p>
           <p><strong>Encargado legal: </strong><%= @judoka.parental_or_responsibility %></p>
           <p><strong>Fecha de inicio: </strong><%= @judoka.start_date %></p>
-        </div>
-      </section>
+          <%= link_to 'Editar', edit_judoka_registration_path %> 
+      </div>
     </div>
-</article>
-  </div>
-</section>
+

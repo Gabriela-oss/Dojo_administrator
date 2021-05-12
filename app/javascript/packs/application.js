@@ -8,8 +8,8 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "chartkick/chart.js"
+require ('packs/judoka')
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-require ('packs/judoka')

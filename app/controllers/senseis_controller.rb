@@ -7,6 +7,7 @@ class SenseisController < ApplicationController
   end
 
   def show
+    @judokas = Judoka.all
     @sensei = Sensei.find(params[:id])
   end
 

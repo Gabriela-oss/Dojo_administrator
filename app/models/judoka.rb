@@ -15,9 +15,6 @@ class Judoka < ApplicationRecord
   has_many :judoka_courses
   has_many :courses, through: :judoka_courses
 
-  has_many :judoka_judotests
-  has_many :judo_tests, through: :judoka_judotests
-
   def self.find_by_uid!(uid)
     Judoka.find_by!("name = :p OR id = :p", p: uid)
   end
