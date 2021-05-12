@@ -1,102 +1,114 @@
-<h2>Registrate</h2>
+<div class="container">
+
+<h2 class="text-center p-5">Registrate</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "judokas/shared/error_messages", resource: resource %>
+  <div class="col-sm-6 container">
+   <div class="form-row">
+     
+      <div class="form-group col-sm-6">
+        <%= f.label :nombre %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "Nombre" %>
+      </div>
 
-    <div class="field">
-    <%= f.label :dojo_id %><br />
-    <%= f.select :dojo_id, options_from_collection_for_select(@dojos, :id, :name), prompt: "Seleccionar el Dojo:" %>
+      <div class="form-group col-sm-6">
+        <%= f.label :primer_apellido %><br />
+        <%= f.text_field :last_name, autofocus: true, autocomplete: "Primer apellido" %>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <%= f.label :segundo_apellido %><br />
+        <%= f.text_field :surname, autofocus: true, autocomplete: "Segundo nombre" %>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <%= f.label :tipo_de_identificación %><br />
+        <%= f.select :id_type, options_for_select(@types), prompt: "Seleccione el tipo de identificación:"%>
+      </div> 
+
+      <div class="form-group col-sm-6">
+        <%= f.label :nacionalidad %><br />
+        <%= f.text_field :nationality, autofocus: true, autocomplete: "Nacionalidad" %>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <%= f.label :número_de_identificación %><br />
+        <%= f.text_field :id_card, autofocus: true, autocomplete: "Número de identificación" %>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <%= f.label :número_de_teléfono %><br />
+        <%= f.text_field :phone_number, autofocus: true, autocomplete: "Número de teléfono" %>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <%= f.label :dirreción %><br />
+        <%= f.text_field :address, autofocus: true, autocomplete: "Dirreción" %>
+      </div>
+    </div>
   </div>
+<!---->
+  <div class="col-sm-6 container">
+   <div class="row">
+        <div class="form-group col-sm-6">
+      <%= f.label :fecha_de_nacimiento %><br />
+      <%= f.date_field :date_of_birth, autofocus: true, autocomplete: "Fecha nacimiento" %>
+      </div> 
 
-     <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "Nombre" %>
+     <div class="form-group col-sm-6">
+        <%= f.label :dojo %><br />
+        <%= f.select :dojo_id, options_from_collection_for_select(@dojos, :id, :name), prompt: "Seleccionar el Dojo:" %>
+      </div>
+
+
+      <div class="form-group col-sm-6">
+        <%= f.label :padre_o_responsable %><br />
+        <%= f.text_field :parental_or_responsibility, autocomplete: "No pertenece", placeholder: 'De ser necesario' %>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <%= f.label :fecha_de_inicio %><br />
+        <%= f.date_field :start_date, autofocus: true, autocomplete: "Fecha de inicio" %>
+      </div>
+      
+      <div class="form-group col-sm-6">
+        <%= f.label :foto %><br />
+        <%= f.file_field :photo, autofocus: true, autocomplete: "Foto" %>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <%= f.label :categoría %><br />
+        <%= f.select :categories, options_from_collection_for_select(@categories, :id, :name), prompt: 'Selecciona una categoria'  %>
+      </div>
+
+      <div id="levels"></div>
+
+      <div class="form-group col-sm-6">
+        <%= f.label :correo %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "Correo" %>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <%= f.label :contraseña %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> mínimo de carácteres)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+      
+
+      <div class="form-group col-sm-6">
+        <%= f.label :confirmación_contraseña %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+    </div>
+      <div class="actions col-sm-6">
+        <%= f.submit "Registrate", class:'btn btn-danger' %>
+      </div>
+    <% end %>
+
+    <%= render "judokas/shared/links" %>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "Primer apellido" %>
-  </div>
-
-   <div class="field">
-    <%= f.label :surname %><br />
-    <%= f.text_field :surname, autofocus: true, autocomplete: "Segundo nombre" %>
-  </div>
-
-     <div class="field">
-   <%= f.label :date_of_birth %><br />
-   <%= f.date_field :date_of_birth, autofocus: true, autocomplete: "Fecha nacimiento" %>
-  </div> 
-
-  <div class="field">
-   <%= f.label :id_type %><br />
-   <%= f.select :id_type, options_for_select(@types), prompt: "Seleccione el tipo de identificación:"%>
-  </div> 
-  
-  <div class="field">
-    <%= f.label :nationality %><br />
-    <%= f.text_field :nationality, autofocus: true, autocomplete: "Nacionalidad" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :id_card %><br />
-    <%= f.text_field :id_card, autofocus: true, autocomplete: "Número de identificación" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address, autofocus: true, autocomplete: "Dirreción" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :phone_number %><br />
-    <%= f.text_field :phone_number, autofocus: true, autocomplete: "Número de teléfono" %>
-  </div> 
-
-  <div class="field">
-    <%= f.label :parental_or_responsibility %><br />
-    <%= f.text_field :parental_or_responsibility, autocomplete: "No pertenece", placeholder: 'De ser necesario' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :start_date %><br />
-    <%= f.date_field :start_date, autofocus: true, autocomplete: "Fecha de inicio" %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :photo %><br />
-    <%= f.file_field :photo, autofocus: true, autocomplete: "Foto" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :categories %><br />
-    <%= f.select :categories, options_from_collection_for_select(@categories, :id, :name), prompt: 'Selecciona una categoria'  %>
-  </div>
-
-  <div id="levels"></div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "Correo" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-  
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Registrate" %>
-  </div>
-<% end %>
-
-<%= render "judokas/shared/links" %>

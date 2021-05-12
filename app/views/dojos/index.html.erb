@@ -2,8 +2,8 @@
 
 <h1>Dojos</h1>
 
-<table>
-  <thead>
+<table class="table p-5">
+  <thead class="thead-dark">
     <tr>
       <th>Nombre</th>
       <th>Correo</th>
@@ -20,9 +20,9 @@
         <td><%= dojo.email %></td>
         <td><%= dojo.address %></td>
         <td><%= dojo.active %></td>
-        <td><%= link_to 'Mostrar', dojo %></td>
-        <td><%= link_to 'Editar', edit_dojo_path(dojo) %></td>
-        <td><%= link_to 'Destruir', dojo, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+        <td><%= link_to 'Mostrar', dojo, class:'btn btn-danger' %></td>
+        <td><%= link_to 'Editar', edit_dojo_path(dojo), class:'btn btn-danger' %></td>
+        <td><%= link_to 'Destruir', dojo, method: :delete, data: { confirm: '¿Estás seguro?' }, class:'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'Nuevo Dojo', new_dojo_path %>
+<%= link_to 'Nuevo Dojo', new_dojo_path, class:'btn btn-danger' %>
