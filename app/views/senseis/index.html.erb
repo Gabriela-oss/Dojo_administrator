@@ -16,7 +16,7 @@
 <tr>
 <td><%= sensei.name %></td>
 <td><%= sensei.id_card %></td>
-<td><%= link_to sensei.name, senseis_show_path(sensei.id) %></td>
+<td><%= link_to 'Mostrar', senseis_show_path(sensei.id), class:'btn btn-danger' %></td>
 </tr>
 <% end %>
 </tbody>
