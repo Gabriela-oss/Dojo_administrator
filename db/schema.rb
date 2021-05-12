@@ -87,8 +87,8 @@ ActiveRecord::Schema.define(version: 2021_05_12_020312) do
     t.integer "vertical_jump", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "judoka_id", null: false
-    t.bigint "sensei_id", null: false
+    t.bigint "judoka_id"
+    t.bigint "sensei_id"
     t.index ["judoka_id"], name: "index_judo_tests_on_judoka_id"
     t.index ["sensei_id"], name: "index_judo_tests_on_sensei_id"
   end
